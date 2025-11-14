@@ -1,0 +1,1 @@
+import{d as s,f as i}from"./B9Tch2p9.js";const e=i({target:null,visible:!1}),o=()=>({show:t=>{e.target=t,e.visible=!0},hide:()=>{e.visible=!1},target:s(()=>e.target),isVisible:s(()=>e.visible)});export{o as u};

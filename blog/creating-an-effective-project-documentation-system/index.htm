@@ -1,0 +1,737 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="dark-mode">
+<head>
+
+  <title>Creating an Effective Project Documentation System</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preload" as="style" href="../assets/built/screen.css?v=891277183f">
+  <link rel="preload" as="script" href="../assets/built/casper.js?v=891277183f">
+
+  <link rel="stylesheet" type="text/css" href="../assets/built/screen.css?v=891277183f">
+
+  <link rel="stylesheet" href="../../css2-1?family=Anybody:ital,wght@0,400;0,500;0,600;1,200&display=swap">
+  <link rel="stylesheet" href="../../css2-2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
+  <link rel="stylesheet" href="../../ajax/libs/tocbot/4.12.3/tocbot.css">
+
+  <style>
+    body {
+      --font-sans: 'Roboto', sans-serif;
+      --font-serif: 'Roboto', sans-serif;
+      --font-header: 'Anybody', 'Roboto', sans-serif;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-header);
+    }
+  </style>
+
+  <style>
+    .gh-content {
+      position: relative;
+    }
+
+    .gh-toc > .toc-list {
+      position: relative;
+    }
+
+    .toc-list {
+      overflow: hidden;
+      list-style: none;
+    }
+
+    @media (min-width: 1300px) {
+      .gh-sidebar {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin-top: 4vmin;
+        grid-column: wide-start / main-start; /* Place the TOC to the left of the content */
+      }
+
+      .gh-toc-wrapper {
+        position: sticky; /* On larger screens, TOC will stay in the same spot on the page */
+        top: 12vmin;
+      }
+    }
+
+    .gh-toc .is-active-link::before {
+      background-color: var(--ghost-accent-color); /* Defines TOC   accent color based on Accent color set in Ghost Admin */
+    }
+
+    .toc-link {
+      text-decoration: none !important;
+      color: #5f5f5f;
+    }
+
+    .toc-link.is-active-link {
+      font-weight: 400;
+      color: currentColor;
+      color: white;
+    }
+  </style>
+  <meta name="description" content="Learn how to create effective project documentation, along with tips and tools to keep your team productive and streamlined.">
+    <link rel="icon" href="../../content/images/size/w256h256/2024/12/icon_dark_1024_round-1.png" type="image/png">
+    <link rel="canonical" href="index.htm">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="amphtml" href="amp/index.htm">
+    
+    <meta property="og:site_name" content="Orchestra Blog — Insights on collaboration and productivity">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Creating an Effective Project Documentation System">
+    <meta property="og:description" content="Learn how to create effective project documentation, along with tips and tools to keep your team productive and streamlined.">
+    <meta property="og:url" content="https://orch.so/blog/creating-an-effective-project-documentation-system/">
+    <meta property="og:image" content="https://orch.so/blog/content/images/2024/10/LinkedIn-cover---3-2.png">
+    <meta property="article:published_time" content="2024-10-28T10:27:25.000Z">
+    <meta property="article:modified_time" content="2025-04-15T08:38:42.000Z">
+    <meta property="article:tag" content="Productivity">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Creating an Effective Project Documentation System">
+    <meta name="twitter:description" content="Learn how to create effective project documentation, along with tips and tools to keep your team productive and streamlined.">
+    <meta name="twitter:url" content="https://orch.so/blog/creating-an-effective-project-documentation-system/">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Sabina V">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Productivity">
+    <meta name="twitter:site" content="@orchso">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Orchestra Blog — Insights on collaboration and productivity",
+        "url": "https://orch.so/blog/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://cdn.blog.orch.so/content/images/2024/12/Orch-Blog-1.svg"
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Sabina V",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://cdn.blog.orch.so/content/images/2024/12/sabina.jpeg",
+            "width": 1200,
+            "height": 1200
+        },
+        "url": "https://orch.so/blog/author/sabina-v/",
+        "sameAs": [
+            "https://www.linkedin.com/in/sabina-vardanashvili-723091233/"
+        ]
+    },
+    "headline": "Creating an Effective Project Documentation System",
+    "url": "https://orch.so/blog/creating-an-effective-project-documentation-system/",
+    "datePublished": "2024-10-28T10:27:25.000Z",
+    "dateModified": "2025-04-15T08:38:42.000Z",
+    "keywords": "Productivity",
+    "description": "Learn how to create effective project documentation, along with tips and tools to keep your team productive and streamlined.",
+    "mainEntityOfPage": "https://orch.so/blog/creating-an-effective-project-documentation-system/"
+}
+    </script>
+
+    <meta name="generator" content="Ghost 5.105">
+    <link rel="alternate" type="application/rss+xml" title="Orchestra Blog — Insights on collaboration and productivity" href="../rss/index.htm">
+    
+    <script defer="" src="../../ghost/sodo-search%40~1.5/umd/sodo-search.min.js" data-key="d33207e5db50418b7d96e73c99" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.5/umd/main.css" data-sodo-search="https://orch.so/blog/ghost/blog/" data-locale="en" crossorigin="anonymous"></script>
+    
+    <link href="https://orch.so/blog/webmentions/receive/" rel="webmention">
+    <script defer="" src="../public/cards.min.js?v=891277183f"></script><style>:root {--ghost-accent-color: #2FD053;}</style>
+    <link rel="stylesheet" type="text/css" href="../public/cards.min.css?v=891277183f">
+    <!-- Google tag (gtag.js) -->
+<script async="" src="../../gtag/js?id=G-QWWZMYG71P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QWWZMYG71P');
+</script>
+
+<!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NRXJGBHC');</script>
+<!-- End Google Tag Manager -->
+
+</head>
+<body class="post-template tag-productivity tag-hash-import-2024-12-16-06-57 tag-hash-import-2024-12-19-11-07 is-head-left-logo">
+
+<div class="viewport">
+  <style>
+    .sticky-header {
+      position: sticky;
+      top: 0;
+    }
+  </style>
+  <header id="gh-head" class="gh-head outer is-header-hidden sticky-header">
+    <div class="gh-head-inner inner">
+      <div class="gh-head-brand">
+        <a class="gh-head-logo" href="../index.htm">
+          <!-- <a class="gh-head-logo" href="https://orch.so/blog"> -->
+            <img src="../../content/images/2024/12/Orch-Blog-1.svg" alt="Orchestra Blog — Insights on collaboration and productivity">
+        </a>
+        <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search=""><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+</svg>
+</button>
+        <button class="gh-burger"></button>
+      </div>
+
+      <nav class="gh-head-menu">
+        <ul class="nav">
+    <li class="nav-product"><a href="../tag/product/index.htm">Product</a></li>
+    <li class="nav-productivity"><a href="../tag/productivity/index.htm">Productivity</a></li>
+    <li class="nav-collaboration"><a href="../tag/collaboration/index.htm">Collaboration</a></li>
+    <li class="nav-customer-stories"><a href="../tag/customer-stories/index.htm">Customer Stories</a></li>
+    <li class="nav-partners"><a href="../tag/partners/index.htm">Partners</a></li>
+</ul>
+
+      </nav>
+
+      <div class="gh-head-actions">
+            <button class="gh-search gh-icon-btn" data-ghost-search=""><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+</svg>
+</button>
+        <a class="gh-head-button" href="../../index.htm">Try Orchestra</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="site-content">
+    
+
+
+
+  <main id="site-main" class="site-main">
+    <article class="article post tag-productivity tag-hash-import-2024-12-16-06-57 tag-hash-import-2024-12-19-11-07 no-image image-small">
+
+      <header class="article-header gh-canvas">
+
+        <div class="article-tag post-card-tags">
+            <span class="post-card-primary-tag">
+                    <a href="../tag/productivity/index.htm">Productivity</a>
+                </span>
+        </div>
+
+        <h1 class="article-title">Creating an Effective Project Documentation System</h1>
+
+          <p class="article-excerpt">Learn how to create effective project documentation, along with tips and tools to keep your team productive and streamlined.</p>
+
+        <div class="article-byline">
+          <section class="article-byline-content">
+
+            <ul class="author-list">
+                <li class="author-list-item">
+                    <a href="../author/sabina-v/index.htm" class="author-avatar">
+                      <img class="author-profile-image" src="../../content/images/2024/12/sabina.jpeg" alt="Sabina V">
+                    </a>
+                </li>
+            </ul>
+
+            <div class="article-byline-meta">
+              <h4 class="author-name"><a href="../author/sabina-v/index.htm">Sabina V</a></h4>
+              <div class="byline-meta-content">
+                <time class="byline-meta-date" datetime="2024-10-28">Oct 28, 2024</time>
+                  <span class="byline-reading-time"><span class="bull">&bull;</span> 5 min read</span>
+              </div>
+            </div>
+
+          </section>
+        </div>
+
+
+      </header>
+
+      <section class="gh-content gh-canvas">
+        <aside class="gh-sidebar">
+          <div class="gh-toc-wrapper">
+            <div class="gh-toc"></div>
+            <style>
+  .share-block {
+    margin: 4rem auto 8rem;
+    text-align: left;
+    max-width: 700px;
+  }
+
+  .share-block span {
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .share-block a {
+    display: inline-block;
+    transition: all 0.3s;
+    margin: 0 0.1rem;
+  }
+
+  .share-block a:hover {
+    transform: scale(1.1);
+  }
+</style>
+<div class="share-block">
+  <span>Share</span>
+  <a href="https://x.com/intent/tweet?url=https://orch.so/blog/creating-an-effective-project-documentation-system/&text=Creating%20an%20Effective%20Project%20Documentation%20System" target="_blank" rel="noopener">
+  <svg class="t-sociallinks__svg" role="presentation" xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewbox="0 0 48 48">
+  <g clip-path="url(#clip0_3697_102)">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48ZM33.3482 14L25.9027 22.4686H25.9023L34 34H28.0445L22.5915 26.2348L15.7644 34H14L21.8082 25.1193L14 14H19.9555L25.119 21.3532L31.5838 14H33.3482ZM22.695 24.1101L23.4861 25.2173V25.2177L28.8746 32.7594H31.5847L24.9813 23.5172L24.1902 22.4099L19.1103 15.2997H16.4002L22.695 24.1101Z" fill="#ffffff"></path>
+  </g>
+  <defs>
+    <clippath id="clip0_3697_102">
+      <rect width="48" height="48" fill="white"></rect>
+    </clippath>
+  </defs>
+</svg>
+  </a>
+  <a href="https://www.facebook.com/sharer.php?u=https://orch.so/blog/creating-an-effective-project-documentation-system/" target="_blank" rel="noopener">
+  <svg class="icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="25px" height="25px">
+  <path d="M23.9981 11.9991C23.9981 5.37216 18.626 0 11.9991 0C5.37216 0 0 5.37216 0 11.9991C0 17.9882 4.38789 22.9522 10.1242 23.8524V15.4676H7.07758V11.9991H10.1242V9.35553C10.1242 6.34826 11.9156 4.68714 14.6564 4.68714C15.9692 4.68714 17.3424 4.92149 17.3424 4.92149V7.87439H15.8294C14.3388 7.87439 13.8739 8.79933 13.8739 9.74824V11.9991H17.2018L16.6698 15.4676H13.8739V23.8524C19.6103 22.9522 23.9981 17.9882 23.9981 11.9991Z"></path>
+</svg>
+  </a>
+  <a href="https://t.me/share/url?url=https://orch.so/blog/creating-an-effective-project-documentation-system/&text=Creating%20an%20Effective%20Project%20Documentation%20System" target="_blank" rel="noopener">
+  <svg role='presentation' width='25px' height='25px' viewbox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'>
+  <path fill-rule='evenodd' clip-rule='evenodd' d='M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50Zm21.977-68.056c.386-4.38-4.24-2.576-4.24-2.576-3.415 1.414-6.937 2.85-10.497 4.302-11.04 4.503-22.444 9.155-32.159 13.734-5.268 1.932-2.184 3.864-2.184 3.864l8.351 2.577c3.855 1.16 5.91-.129 5.91-.129l17.988-12.238c6.424-4.38 4.882-.773 3.34.773l-13.49 12.882c-2.056 1.804-1.028 3.35-.129 4.123 2.55 2.249 8.82 6.364 11.557 8.16.712.467 1.185.778 1.292.858.642.515 4.111 2.834 6.424 2.319 2.313-.516 2.57-3.479 2.57-3.479l3.083-20.226c.462-3.511.993-6.886 1.417-9.582.4-2.546.705-4.485.767-5.362Z' fill='#ffffff'></path>
+</svg>
+  </a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://orch.so/blog/creating-an-effective-project-documentation-system/&title=Creating%20an%20Effective%20Project%20Documentation%20System" target="_blank" rel="noopener">
+  <svg class="t-sociallinks__svg" role="presentation" width="25px" height="25px" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M50 100c27.6142 0 50-22.3858 50-50S77.6142 0 50 0 0 22.3858 0 50s22.3858 50 50 50Zm23-31.0002V52.363c0-8.9114-4.7586-13.0586-11.1079-13.0586-5.1234 0-7.4123 2.8199-8.6942 4.7942v-4.1124h-9.6468c.1297 2.7235 0 29.0136 0 29.0136h9.6484v-16.203c0-.8675.0657-1.731.3203-2.3513.6981-1.7351 2.284-3.5286 4.9491-3.5286 3.4905 0 4.8859 2.6611 4.8859 6.5602v15.5227H73ZM53.1979 44.0986v.094h-.0632c.0069-.0111.0148-.0228.0229-.0346.0137-.0198.0281-.0401.0403-.0594ZM28 31.0123C28 28.1648 30.1583 26 33.4591 26c3.3016 0 5.3302 2.1648 5.3934 5.0123 0 2.7851-2.0918 5.0156-5.4567 5.0156h-.064c-3.2351 0-5.3318-2.2305-5.3318-5.0156Zm10.2177 37.9875h-9.6445V39.9862h9.6445v29.0136Z" fill="#ffffff"></path>
+</svg>
+  </a>
+  <a href="../../cdn-cgi/l/email-protection.html#3d024e485f57585e49007e4f585c4954535a180f0d5c53180f0d785b5b585e49544b58180f0d6d4f5257585e49180f0d79525e48505853495c49545253180f0d6e444e4958501b5c504d065f525944005549494d4e071212524f5e55134e52125f51525a125e4f585c4954535a105c5310585b5b585e49544b58104d4f5257585e491059525e48505853495c49545253104e444e49585012" target="_blank" rel="noopener">
+  <svg class='t-sociallinks__svg' role='presentation' width='25px' height='25px' viewbox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'>
+  <path fill-rule='evenodd' clip-rule='evenodd' d='M50 100C77.6142 100 100 77.6142 100 50C100 22.3858 77.6142 0 50 0C22.3858 0 0 22.3858 0 50C0 77.6142 22.3858 100 50 100ZM51.8276 49.2076L74.191 33.6901C73.4347 32.6649 72.2183 32 70.8466 32H29.1534C27.8336 32 26.6576 32.6156 25.8968 33.5752L47.5881 49.172C48.8512 50.0802 50.5494 50.0945 51.8276 49.2076ZM75 63.6709V37.6286L53.4668 52.57C51.1883 54.151 48.1611 54.1256 45.9095 52.5066L25 37.4719V63.6709C25 65.9648 26.8595 67.8243 29.1534 67.8243H70.8466C73.1405 67.8243 75 65.9648 75 63.6709Z' fill='#ffffff'></path>
+</svg>
+  </a>
+</div>
+
+          </div>
+        </aside> 
+        <p>Clear and effective project documentation can make or break a project. When done right, it keeps teams on the same page, reduces mistakes, and ensures everyone knows what to do and when. Unluckily, many teams treat documentation as an afterthought, prioritizing the 'real work' over it.</p><p>Here's the truth: project documentation is essential. It improves collaboration, avoids confusion, and is especially important for remote teams that rely on organized communication. With the right system in place, your team can be more productive, stay focused, and spend less time on miscommunication.</p><p>This guide will walk you through everything you need to know about creating a solid project documentation system, from its benefits to best practices, tools, and strategies for success.</p><h2 id="what-is-project-documentation"><strong>What is&nbsp;project documentation?</strong></h2><p>Project documentation is a set of materials that explains a project's scope, details, and processes. It includes all documents that track a project from start to finish, such as:</p><ul><li>Project plans.</li><li>Task lists.</li><li>Timelines and milestones.</li><li>Risk management plans.</li><li>Reports.</li><li>User guides and manuals.</li><li>Meeting notes.</li></ul><p>Documentation keeps the team on the same page, informs stakeholders, and is a reference for future projects. But setting up and maintaining it&nbsp;can be challenging, especially in agile settings.</p><h2 id="how-it-defines-success"><strong>How it defines success</strong></h2><p>Proper documentation is the backbone of any project. Without it, teams lose focus, miss deadlines, and face setbacks that could have been avoided.</p><h3 id="key-benefits-of-effective-project-documentation"><strong>Key benefits of effective project documentation</strong></h3><ul><li><strong>Clarity.</strong> A well-documented project ensures everyone everyone understands the project's goals, tasks, and timelines.&nbsp;</li><li><strong>Accountability.</strong> Clear documentation makes it easier to track who is responsible for what.&nbsp;</li><li><strong>Improved collaboration.</strong> Documentation acts&nbsp;as a single source of truth, especially for remote teams.&nbsp;</li><li><strong>Precise decision-making.</strong> With all the details in one place stakeholders make precise decisions.&nbsp;</li><li><strong>Light onboarding.</strong> New team members can quickly catch up by reviewing the documentation.</li></ul><p>In short, effective documentation simplifies the process, reduces risks, and provides a valuable resource for future projects. </p><h2 id="project-documentation-and-its-challenges"><strong>Project documentation and its challenges</strong></h2><p>Before we dive into solutions, let's look at some common challenges teams face with documentation:&nbsp;</p><ul><li><strong>Inconsistency. </strong>Different team members document in different ways, causing confusion.&nbsp;</li><li><strong>Information overload. </strong>It can be hard to know what's important to include and what to leave out.</li><li><strong>Time pressure. </strong>Documenting while doing tasks can feel like a burden, leading to incomplete or rushed records.&nbsp;</li><li><strong>Fragmented systems.</strong> Using too many tools — emails, spreadsheets, and apps — makes it hard to keep documentation organized and accessible.&nbsp;</li></ul><p>The good news is, with the right tools, templates, and strategies, these issues can be solved — details to come. </p><h2 id="key-elements-of-an-effective-project-documentation-system"><strong>Key elements of an effective project documentation system</strong></h2><p>Building an efficient project documentation system requires a few key elements:&nbsp;</p><h3 id="centralization"><strong>Centralization</strong></h3><p>All documents should be stored in one place. Whether it's a shared drive, a project management tool like <a href="../../index-2.htm?ref=orch.so" rel="noreferrer">Orchestra</a>, or a cloud storage platform, everyone on the team should know where to find the most up-to-date information.</p><h3 id="consistency"><strong>Consistency</strong></h3><p>Use the same style and format for all documents to avoid confusion. Templates can help keep things uniform.&nbsp;</p><h3 id="easy-access"><strong>Easy access</strong></h3><p>Ensure everyone on the team can quickly access documents. Especially for remote and hybrid teams.&nbsp;</p><h3 id="search-ease"><strong>Search ease</strong></h3><p>Make searching and finding the right information easy using tags, categories, or indexing.&nbsp;</p><h3 id="real-time-updates"><strong>Real-time updates</strong></h3><p>Your documentation should reflect the current state of the project. If timelines change or tasks shift, the documents should be updated in real-time.</p><h2 id="creating-structure-for-project-documentation"><strong>Creating structure for project documentation&nbsp;</strong></h2><p>A well-organized project documentation system is key to ensuring that all team members can easily access the information they need. Let's get straight to the point and see what an effective structure of any documentation process should look like:&nbsp;</p><h3 id="project-overview"><strong>Project overview</strong></h3><ul><li>Clearly state the project name.</li><li>Define the purpose and goals of the project.&nbsp;</li><li>List key stakeholders and team members involved.</li><li>Include start and end dates, with key phases or deadlines.&nbsp;</li></ul><h3 id="scope-and-requirements"><strong>Scope and requirements</strong></h3><ul><li>Clearly outline project goals.&nbsp;</li><li>Specify what will be delivered at the end of the project.</li><li>List any assumptions the project relies on and any constraints to keep in mind.</li><li>List all functional and non-functional requirements.&nbsp;</li></ul><h3 id="task-management"><strong>Task management</strong></h3><ul><li>Break tasks into smaller ones.</li><li>Highlight key milestones that need to be achieved.</li><li>Assign tasks to specific team members.</li><li>Note any interdependencies between tasks.&nbsp;</li></ul><h3 id="risk-and-issue-tracking"><strong>Risk and issue tracking</strong></h3><ul><li>Identify risks&nbsp;and include strategies for minimizing ones.</li><li>Track active issues and their resolutions.&nbsp;</li></ul><h3 id="meeting-notes-and-communication"><strong>Meeting notes and communication</strong></h3><ul><li>Maintain records of meeting agendas and minutes for reference.&nbsp;</li><li>Define the communication plan.</li></ul><h3 id="reporting-and-metrics"><strong>Reporting and metrics</strong></h3><ul><li>Regularly update projects' statuses.</li><li>Track KPIs.&nbsp;</li><li>Record insights for future projects.</li></ul><h2 id="top-5-tools-for-project-documentation"><strong>Top 5 tools for project documentation</strong></h2><p>Several tools can help streamline your project documentation process. Some popular ones include:</p><ul><li><strong>Notion.</strong> A connected workspace for managing documents, projects, and knowledge.</li><li><strong>Orchestra.</strong> An all-in-one tool for work: keep not only your documents close to the team but also chats, channels, calls, task boards, and API integrations — all in one place.</li><li><strong>Google Docs.</strong> A real-time collaborative document creation tool. Great for editors.</li><li><strong>Confluence.</strong> A documentation platform offering templates, task management, and integrations.</li><li><strong>Trello.</strong> A classic Kanban-style tool for managing tasks and documentation.</li></ul><h2 id="effortless-project-documentation-with-orchestra"><strong>Effortless project documentation with Orchestra&nbsp;</strong></h2><p><a href="../../index-2.htm?ref=orch.so" rel="noreferrer">Orchestra</a> is a messaging-first tool made to cut down on the time spent searching for information, boosting team productivity. </p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../../content/images/2024/12/orch-1-3-1.png" class="kg-image" alt="With Orchestra, docs &amp; tasks are always at hand" loading="lazy" width="720" height="394"><figcaption><span style="white-space: pre-wrap;">With </span><i><em class="italic" style="white-space: pre-wrap;">Orchestra</em></i><span style="white-space: pre-wrap;">, docs &amp; tasks are always at hand</span></figcaption></figure><p>From now on, you can be sure that all necessary messages, tasks, and documents are close at hand:</p><ul><li><strong>Never lose track of files.</strong> Keep all files, plans, and updates in one easy-to-access location.</li><li><strong>Real-time collaboration.</strong> Use the integrated messenger to keep all team members aligned and ensure no context is lost on tasks.</li><li><strong>Intuitive task tracking.</strong> Monitor project timelines and task progress with customizable lists, boards, and cards.</li></ul><p>Remember, effective project documentation isn't a one-time effort; it's a continuous process that requires regular updates and improvements. By following best practices and using the right tools, your team can create a documentation system that works best for you. </p><p>Make a change in the way you approach documentation!</p><h2 id="faq"><strong>FAQ</strong></h2><div class="kg-card kg-toggle-card" data-kg-toggle-state="close">
+            <div class="kg-toggle-heading">
+                <h4 class="kg-toggle-heading-text"><b><strong style="white-space: pre-wrap;">Why is project documentation important?</strong></b></h4>
+                <button class="kg-toggle-card-icon" aria-label="Expand toggle to read content">
+                    <svg id="Regular" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                        <path class="cls-1" d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="kg-toggle-content"><p><span style="white-space: pre-wrap;">Project documentation ensures that all team members have access to the same information, which helps avoid miscommunication and ensures the project stays on track.</span></p></div>
+        </div><div class="kg-card kg-toggle-card" data-kg-toggle-state="close">
+            <div class="kg-toggle-heading">
+                <h4 class="kg-toggle-heading-text"><b><strong style="white-space: pre-wrap;">How often should documentation be updated?</strong></b></h4>
+                <button class="kg-toggle-card-icon" aria-label="Expand toggle to read content">
+                    <svg id="Regular" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                        <path class="cls-1" d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="kg-toggle-content"><p><span style="white-space: pre-wrap;">Documentation should be updated regularly, especially after key project milestones or changes in scope.</span></p></div>
+        </div><div class="kg-card kg-toggle-card" data-kg-toggle-state="close">
+            <div class="kg-toggle-heading">
+                <h4 class="kg-toggle-heading-text"><b><strong style="white-space: pre-wrap;">What are the best tools for project documentation?</strong></b></h4>
+                <button class="kg-toggle-card-icon" aria-label="Expand toggle to read content">
+                    <svg id="Regular" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                        <path class="cls-1" d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="kg-toggle-content"><p><span style="white-space: pre-wrap;">Some popular tools include Notion, </span><a href="../../index-2.htm?ref=orch.so" rel="noreferrer"><span style="white-space: pre-wrap;">Orchestra</span></a><span style="white-space: pre-wrap;">, Google Docs, Confluence, and Trello. Each tool offers unique features that can help teams manage documentation more effectively.</span></p></div>
+        </div><div class="kg-card kg-toggle-card" data-kg-toggle-state="close">
+            <div class="kg-toggle-heading">
+                <h4 class="kg-toggle-heading-text"><b><strong style="white-space: pre-wrap;">How can I encourage my team to contribute to project documentation?</strong></b></h4>
+                <button class="kg-toggle-card-icon" aria-label="Expand toggle to read content">
+                    <svg id="Regular" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                        <path class="cls-1" d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="kg-toggle-content"><p><span style="white-space: pre-wrap;">By setting documentation standards and using templates. Integrating documentation into the project workflow, rather than treating it as an afterthought, can also boost participation.</span></p></div>
+        </div><div class="kg-card kg-toggle-card" data-kg-toggle-state="close">
+            <div class="kg-toggle-heading">
+                <h4 class="kg-toggle-heading-text"><b><strong style="white-space: pre-wrap;">How can I ensure my project documentation system is scalable?</strong></b></h4>
+                <button class="kg-toggle-card-icon" aria-label="Expand toggle to read content">
+                    <svg id="Regular" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                        <path class="cls-1" d="M23.25,7.311,12.53,18.03a.749.749,0,0,1-1.06,0L.75,7.311"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="kg-toggle-content"><p><span style="white-space: pre-wrap;">Choose a flexible platform like </span><a href="../../index-2.htm?ref=orch.so" rel="noreferrer"><span style="white-space: pre-wrap;">Orchestra</span></a><span style="white-space: pre-wrap;"> that can grow with your team and handle larger, more complex projects. Regularly review your documentation process to ensure it’s keeping pace with the team's needs.</span></p></div>
+        </div>
+      </section>
+
+
+    </article>
+  </main>
+
+
+    <section class="footer-cta outer">
+      <div class="inner footer-cta-create-workspace">
+          <h2 class="footer-cta-title">Join Orchestra now and discover how much better collaboration and productivity can be</h2>
+        <a class="gh-head-button" href="../../index-2.htm?ref&#x3D;orch.so">Start free trial</a>
+      </div>
+    </section>
+
+  <style>
+    .footer-cta-create-workspace {
+      max-width: 700px;
+      margin-bottom: 50px;
+    }
+  </style>
+
+
+
+        <aside class="read-more-wrap outer">
+          <div class="read-more inner">
+              
+<article class="post-card post no-image">
+
+
+  <div class="post-card-content">
+
+    <a class="post-card-content-link" href="../google-chat-alternatives-for-2025/index.htm">
+      <header class="post-card-header">
+        <div class="post-card-tags">
+        </div>
+        <h2 class="post-card-title">
+          Google Chat Alternatives for 2025
+        </h2>
+      </header>
+        <div class="post-card-excerpt">As Google officially phased out Hangouts and shifted users to Google Chat, many teams and individuals found themselves reassessing their communication needs. While Google Chat offers a seamless experience inside Gmail and Google Workspace, it’s not always enough.
+
+In 2025, communication apps are expected to do much more than</div>
+    </a>
+
+    <footer class="post-card-meta">
+      <time class="post-card-meta-date" datetime="2025-05-09">May 9, 2025</time>
+        <span class="post-card-meta-length">9 min read</span>
+    </footer>
+
+  </div>
+
+</article>
+              
+<article class="post-card post no-image">
+
+
+  <div class="post-card-content">
+
+    <a class="post-card-content-link" href="../zoom-alternatives-for-2025/index.htm">
+      <header class="post-card-header">
+        <div class="post-card-tags">
+        </div>
+        <h2 class="post-card-title">
+          Zoom Alternatives for 2025
+        </h2>
+      </header>
+        <div class="post-card-excerpt">Everyone knows Zoom. It quickly became the go-to app for team meetings, replacing Skype. But as communication evolves, so do teams’ needs for workplaces. With video calls at the core of its product, Zoom isn’t perfect for everyone.
+
+The good news? In 2025, there are plenty of great Zoom</div>
+    </a>
+
+    <footer class="post-card-meta">
+      <time class="post-card-meta-date" datetime="2025-05-08">May 8, 2025</time>
+        <span class="post-card-meta-length">8 min read</span>
+    </footer>
+
+  </div>
+
+</article>
+              
+<article class="post-card post no-image">
+
+
+  <div class="post-card-content">
+
+    <a class="post-card-content-link" href="../mattermost-alternatives-for-2025/index.htm">
+      <header class="post-card-header">
+        <div class="post-card-tags">
+        </div>
+        <h2 class="post-card-title">
+          Mattermost Alternatives for 2025
+        </h2>
+      </header>
+        <div class="post-card-excerpt">Mattermost has built a strong reputation among tech-savvy teams as one of the first Slack alternatives that comes to mind. Its open-source foundation and self-hosting options make it a favorite for teams that value customization and control over their workflows. But if you’re looking for alternatives that offer similar</div>
+    </a>
+
+    <footer class="post-card-meta">
+      <time class="post-card-meta-date" datetime="2025-05-07">May 7, 2025</time>
+        <span class="post-card-meta-length">10 min read</span>
+    </footer>
+
+  </div>
+
+</article>
+          </div>
+        </aside>
+
+
+
+  </div>
+
+  <style>
+    .footer {
+      font-family: var(--font-header);
+      color: white;
+      padding-top: 60px;
+      margin-top: 55px;
+      padding-bottom: 60px;
+      background-color: var(--color-darkmode);
+      line-height: 1;
+
+      a {
+        color: white !important;
+      }
+    }
+
+    .footer-inner {
+      display: table;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      max-width: 1200px;
+      padding: 0;
+    }
+
+    .footer-inner-left {
+      width: 260px;
+      max-width: 260px;
+      margin: 0 20px 20px 15px;
+      float: left;
+
+      .t-title {
+        display: block;
+        max-width: 120px;
+        width: 100%;
+        color: #fff;
+        font-size: 30px;
+        font-weight: 500;
+      }
+
+      .t-text {
+        color: var(--color-secondary-text);
+        font-family: var(--font-sans);
+        font-size: 14px;
+      }
+    }
+
+    .footer-inner-center {
+      width: 100%;
+      display: table-cell;
+      vertical-align: top;
+      text-align: center;
+      font-weight: 500;
+
+      .footer-inner-nav-item {
+        margin: 0 15px 0 0;
+        display: inline-block;
+        float: none;
+        text-align: left;
+        vertical-align: top;
+        width: 100%;
+        max-width: 160px;
+      }
+    }
+
+    .footer-inner-right {
+      vertical-align: top;
+      display: table-cell;
+
+      .t-sociallinks {
+        margin-left: 15px;
+        margin-bottom: 0;
+        padding-left: 0;
+        list-style: none;
+        width: 140px;
+
+        svg {
+          display: block;
+          width: 33px;
+          height: 33px;
+        }
+
+        ul {
+          padding: 0 !important;
+          margin: 0;
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        .t-sociallinks__item {
+          display: inline-block;
+          margin-right: 11px;
+          margin-bottom: 16px;
+          transition: opacity ease-in-out 0.2s;
+          height: 33px;
+          padding: 0 !important;
+          margin-top: 0 !important;
+        }
+      }
+    }
+
+    @media screen and (max-width: 640px) {
+      .footer-inner {
+        display: block;
+        padding: 0 24px;
+      }
+
+      .footer-inner-left {
+        max-width: 260px;
+        margin-left: 0;
+        float: none;
+        display: block;
+
+        .t-text {
+          margin-bottom: 40px;
+          font-size: 12px;
+        }
+      }
+
+      .footer-inner-center {
+        display: block;
+        width: 100%;
+        float: left;
+
+        .footer-inner-nav-item {
+          margin: 0 0 50px;
+          float: left;
+          width: 50%;
+          max-width: unset;
+        }
+      }
+
+      .footer-inner-right {
+        width: 100%;
+        float: left;
+        .t-sociallinks {
+          margin-left: 0;
+          width: unset;
+        }
+      }
+    }
+  </style>
+  <footer id="rec717088287" class="footer" data-bg-color="#09080a">
+    <div class="footer-inner">
+      <div class="footer-inner-left">
+        <a class="t977__logo-link" href="../../index.htm">
+          <div class="t-title" field="title">Orchestra</div>
+        </a>
+        <div class="t977__text t-text" style="margin-top: 30px;" field="text">© 2024 Orch, Inc. All rights reserved
+        </div>
+      </div>
+      <div class="footer-inner-center">
+        <div class="footer-inner-nav-item">
+          <div class="t977__descr t-descr" field="descr"><a href="../index.htm" target="_blank" rel="noreferrer noopener">Blog</a>
+          </div>
+        </div>
+        <div class="footer-inner-nav-item">
+          <div class="t977__descr t-descr" field="descr2"><a href="../../privacy-policy.html" target="_blank" rel="noreferrer noopener">Privacy Policy</a></div>
+        </div>
+        <div class="footer-inner-nav-item">
+          <div class="t977__descr t-descr" field="descr3"><a href="../../terms-of-use.html" target="_blank" rel="noreferrer noopener">Terms of use</a></div>
+        </div>
+        <div class="footer-inner-nav-item">
+          <div class="t977__descr t-descr" field="descr4"><p style="text-align: left;"><a href="../../cdn-cgi/l/email-protection.html#3c5f59537c534e5f54124f53"><span class="__cf_email__" data-cfemail="87e4e2e8c7e8f5e4efa9f4e8">[email&#160;protected]</span></a>
+          </p></div>
+        </div>
+      </div>
+      <div class="footer-inner-right">
+        <div class="t977__socials t977__socials_small">
+          <div class="t-sociallinks">
+            <ul role="list" class="t-sociallinks__wrapper" aria-label="Social media links"><!-- new soclinks -->
+              <li class="t-sociallinks__item t-sociallinks__item_twitter">
+                <a href="https://x.com/orchso" target="_blank" rel="nofollow noopener" aria-label="X (Twitter)" title="X (Twitter)" style="width: 25px; height: 25px;">
+                  <svg class="t-sociallinks__svg" role="presentation" xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewbox="0 0 48 48">
+                    <g clip-path="url(#clip0_3697_102)">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48ZM33.3482 14L25.9027 22.4686H25.9023L34 34H28.0445L22.5915 26.2348L15.7644 34H14L21.8082 25.1193L14 14H19.9555L25.119 21.3532L31.5838 14H33.3482ZM22.695 24.1101L23.4861 25.2173V25.2177L28.8746 32.7594H31.5847L24.9813 23.5172L24.1902 22.4099L19.1103 15.2997H16.4002L22.695 24.1101Z" fill="#ffffff"></path>
+                    </g>
+                    <defs>
+                      <clippath id="clip0_3697_102">
+                        <rect width="48" height="48" fill="white"></rect>
+                      </clippath>
+                    </defs>
+                  </svg>
+                </a></li>
+              <li class="t-sociallinks__item t-sociallinks__item_telegram"><a href="https://t.me/orch_so" target="_blank" rel="nofollow noopener" aria-label="telegram" style="width: 25px; height: 25px;">
+                <svg class="t-sociallinks__svg" role="presentation" width="25px" height="25px" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50Zm21.977-68.056c.386-4.38-4.24-2.576-4.24-2.576-3.415 1.414-6.937 2.85-10.497 4.302-11.04 4.503-22.444 9.155-32.159 13.734-5.268 1.932-2.184 3.864-2.184 3.864l8.351 2.577c3.855 1.16 5.91-.129 5.91-.129l17.988-12.238c6.424-4.38 4.882-.773 3.34.773l-13.49 12.882c-2.056 1.804-1.028 3.35-.129 4.123 2.55 2.249 8.82 6.364 11.557 8.16.712.467 1.185.778 1.292.858.642.515 4.111 2.834 6.424 2.319 2.313-.516 2.57-3.479 2.57-3.479l3.083-20.226c.462-3.511.993-6.886 1.417-9.582.4-2.546.705-4.485.767-5.362Z" fill="#ffffff"></path>
+                </svg>
+              </a></li>
+              <li class="t-sociallinks__item t-sociallinks__item_email"><a target="_blank" rel="nofollow" aria-label="ceo@orch.so" title="ceo@orch.so" href="../../cdn-cgi/l/email-protection.html#2a494f456a45584942045945" style="width: 25px; height: 25px;">
+                <svg class="t-sociallinks__svg" role="presentation" width="25px" height="25px" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M50 100C77.6142 100 100 77.6142 100 50C100 22.3858 77.6142 0 50 0C22.3858 0 0 22.3858 0 50C0 77.6142 22.3858 100 50 100ZM51.8276 49.2076L74.191 33.6901C73.4347 32.6649 72.2183 32 70.8466 32H29.1534C27.8336 32 26.6576 32.6156 25.8968 33.5752L47.5881 49.172C48.8512 50.0802 50.5494 50.0945 51.8276 49.2076ZM75 63.6709V37.6286L53.4668 52.57C51.1883 54.151 48.1611 54.1256 45.9095 52.5066L25 37.4719V63.6709C25 65.9648 26.8595 67.8243 29.1534 67.8243H70.8466C73.1405 67.8243 75 65.9648 75 63.6709Z" fill="#ffffff"></path>
+                </svg>
+              </a></li>
+              <li class="t-sociallinks__item t-sociallinks__item_youtube"><a href="https://www.youtube.com/@orchso" target="_blank" rel="nofollow noopener" aria-label="youtube" style="width: 25px; height: 25px;">
+                <svg class="t-sociallinks__svg" role="presentation" width="25px" height="25px" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50Zm17.9-67.374c3.838.346 6 2.695 6.474 6.438.332 2.612.626 6.352.626 10.375 0 7.064-.626 11.148-.626 11.148-.588 3.728-2.39 5.752-6.18 6.18-4.235.48-13.76.7-17.992.7-4.38 0-13.237-.184-17.66-.552-3.8-.317-6.394-2.44-6.916-6.218-.38-2.752-.626-6.022-.626-11.222 0-5.788.209-8.238.7-10.853.699-3.732 2.48-5.54 6.548-5.96C36.516 32.221 40.55 32 49.577 32c4.413 0 13.927.228 18.322.626Zm-23.216 9.761v14.374L58.37 49.5l-13.686-7.114Z" fill="#ffffff"></path>
+                </svg>
+              </a></li>
+              <li class="t-sociallinks__item t-sociallinks__item_linkedin"><a href="https://www.linkedin.com/company/orchso/" target="_blank" rel="nofollow noopener" aria-label="linkedin" style="width: 25px; height: 25px;">
+                <svg class="t-sociallinks__svg" role="presentation" width="25px" height="25px" viewbox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M50 100c27.6142 0 50-22.3858 50-50S77.6142 0 50 0 0 22.3858 0 50s22.3858 50 50 50Zm23-31.0002V52.363c0-8.9114-4.7586-13.0586-11.1079-13.0586-5.1234 0-7.4123 2.8199-8.6942 4.7942v-4.1124h-9.6468c.1297 2.7235 0 29.0136 0 29.0136h9.6484v-16.203c0-.8675.0657-1.731.3203-2.3513.6981-1.7351 2.284-3.5286 4.9491-3.5286 3.4905 0 4.8859 2.6611 4.8859 6.5602v15.5227H73ZM53.1979 44.0986v.094h-.0632c.0069-.0111.0148-.0228.0229-.0346.0137-.0198.0281-.0401.0403-.0594ZM28 31.0123C28 28.1648 30.1583 26 33.4591 26c3.3016 0 5.3302 2.1648 5.3934 5.0123 0 2.7851-2.0918 5.0156-5.4567 5.0156h-.064c-3.2351 0-5.3318-2.2305-5.3318-5.0156Zm10.2177 37.9875h-9.6445V39.9862h9.6445v29.0136Z" fill="#ffffff"></path>
+                </svg>
+              </a></li><!-- /new soclinks --></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--<footer class="site-footer outer">
+    <div class="inner">
+      <section class="copyright"><a href="https://orch.so/blog">Orchestra Blog — Insights on collaboration and productivity</a> &copy; 2025
+      </section>
+      &lt;!&ndash; <section class="copyright"><a href="https://orch.so/blog">Orchestra Blog — Insights on collaboration and productivity</a> &copy; 2025</section> &ndash;&gt;
+      &lt;!&ndash; <nav class="site-footer-nav">
+                <ul class="nav">
+    <li class="nav-sign-up"><a href="#/portal/">Sign up</a></li>
+</ul>
+
+            </nav>
+            <div class="gh-powered-by"><a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a></div> &ndash;&gt;
+    </div>
+  </footer>-->
+</div>
+
+
+<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="../../jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous">
+</script>
+<script src="../assets/built/casper.js?v=891277183f"></script>
+<script>
+  $(document).ready(function() {
+    // Mobile Menu Trigger
+    $('.gh-burger').click(function() {
+      $('body').toggleClass('gh-head-open');
+    });
+    // FitVids - Makes video embeds responsive
+    $('.gh-content').fitVids();
+  });
+</script>
+<script src="../../ajax/libs/tocbot/4.31.0/tocbot.min.js"></script>
+<script>
+  tocbot.init({
+    // Where to render the table of contents.
+    tocSelector: '.gh-toc',
+    // Where to grab the headings to build the table of contents.
+    contentSelector: '.gh-content',
+    // Which headings to grab inside of the contentSelector element.
+    headingSelector: 'h1:not(.kg-toggle-heading-text), h2:not(.kg-toggle-heading-text)',//, h3:not(.kg-toggle-heading-text), h4:not(.kg-toggle-heading-text)',
+    // Ensure correct positioning
+    hasInnerContainers: true,
+  });
+</script>
+
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99e66a9d9fd7a8e9',t:'MTc2MzEyMjMzOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

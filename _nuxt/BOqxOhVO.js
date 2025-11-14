@@ -1,0 +1,1 @@
+import{i}from"#entry";import{d as n}from"./B9Tch2p9.js";function d(o){const s=i(),t=n(()=>s.byChat(o._uid).filter(e=>e.created_at<=o.updated_at)),a=n(()=>[...new Set(t.value.map(e=>e.sender_uuid))]),r=n(()=>t.value.length>0);return{mentions:t,mentioners:a,hasMention:r}}export{d as u};

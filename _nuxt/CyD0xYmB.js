@@ -1,0 +1,1 @@
+import{a as o}from"#entry";import{b as r,o as t,a as n}from"./B9Tch2p9.js";import"./DVHQIg-6.js";const s={};function a(e,c){return t(),r("strong",null,[n(e.$slots,"default")])}const m=Object.assign(o(s,[["render",a]]),{__name:"ProseStrong"});export{m as default};
