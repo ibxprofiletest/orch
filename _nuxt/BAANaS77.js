@@ -377,19 +377,7 @@ const CD = di({
                                       {
                                         href: "https://www.producthunt.com/products/orchestra-3?embed=true&utm_source=badge-top-post-badge&utm_medium=badge&utm_source=badge-orchestra-3",
                                         target: "_blank",
-                                      },
-                                      [
-                                        H("img", {
-                                          src: "https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=996964&theme=light&period=weekly&t=1760365658454",
-                                          alt: "Orchestra - A chat-centric workspace for builders and modern teams | Product Hunt",
-                                          style: {
-                                            width: "250px",
-                                            height: "54px",
-                                          },
-                                          width: "250",
-                                          height: "54",
-                                        }),
-                                      ],
+                                      }
                                       -1
                                     ),
                                   ])),
@@ -63643,15 +63631,16 @@ const ZH = { key: 0, class: "py-24 overflow-hidden" },
                                 href: "https://www.producthunt.com/products/orchestra-3?embed=true&utm_source=badge-top-post-badge&utm_medium=badge&utm_source=badge-orchestra-3",
                                 target: "_blank",
                               },
-                              [
-                                H("img", {
-                                  src: "https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=996964&theme=light&period=daily&t=1760365658454",
-                                  alt: "Orchestra - A chat-centric workspace for builders and modern teams | Product Hunt",
-                                  style: { width: "200px", height: "45px" },
-                                  width: "200",
-                                  height: "45",
-                                }),
-                              ],
+                              //removed by MM
+                              // [
+                              //   H("img", {
+                              //     src: "https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=996964&theme=light&period=daily&t=1760365658454",
+                              //     alt: "Orchestra - A chat-centric workspace for builders and modern teams | Product Hunt",
+                              //     style: { width: "200px", height: "45px" },
+                              //     width: "200",
+                              //     height: "45",
+                              //   }),
+                              // ],
                               -1
                             ),
                           ])),
