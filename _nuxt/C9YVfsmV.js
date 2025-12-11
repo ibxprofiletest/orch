@@ -1,0 +1,289 @@
+import {a as Q, D as P, B as oe, v as ne, ac as ie, a1 as V, ad as ae, ae as j} from "#entry";
+import {g as Y, r as y, d as c, ai as se, b, o as v, X as C, x as O, N as ue, ag as X, p as F, J as le, aj as de, i as G, j as B, u as M, l as J, a as re, c as R, y as I, w as q, V as H, W as K, A as ce} from "./B9Tch2p9.js";
+import {C as ve} from "./BSh8ocCn.js";
+import {I as me} from "./BBBMrC_k.js";
+import {u as pe, M as N} from "./Da6NVB2F.js";
+import "./DVHQIg-6.js";
+import "./7BLqRNh7.js";
+import "./B2lQqXLs.js";
+import "./BLaXQDOe.js";
+import "./BIPpw5Je.js";
+import "./BzgFX6yH.js";
+import "./CtBBKx3r.js";
+import "./BcjOUWPv.js";
+import "./kKrnZc_O.js";
+import "./Blo3CUa_.js";
+import "./CUWbNA_u.js";
+import "./6wHgBLHY.js";
+import "./Dr7QmETT.js";
+import "./CgHsU2Ne.js";
+import "./Dg51yJp6.js";
+import "./BDqI7Gkw.js";
+import "./BZpkkrn_.js";
+import "./C_NKgEAb.js";
+import "./BTQLpG95.js";
+import "./DCxyz_Wi.js";
+import "./DGsNhPHD.js";
+import "./CrrdJ4Kw.js";
+import "./BOqxOhVO.js";
+import "./Byddkd9T.js";
+import "./BLdYZ_qD.js";
+import "./DmqFpVwk.js";
+const fe = Y({
+    __name: "WidthResizer",
+    props: {
+        width: {},
+        min: {},
+        max: {},
+        side: {},
+        collapse: {
+            type: Boolean
+        }
+    },
+    emits: ["update:width", "start", "end"],
+    setup(k, {emit: x}) {
+        const s = k
+          , f = x
+          , h = y(null)
+          , d = c( () => h.value?.offsetParent)
+          , g = se(s, "width", {
+            set(a) {
+                return a < 20 && s.collapse ? 2 : s.min && a < s.min ? s.min : s.max && a > s.max ? s.max : a
+            }
+        })
+          , S = y(!1)
+          , W = a => {
+            a.preventDefault();
+            const n = d.value;
+            if (!n)
+                return;
+            const r = n.getBoundingClientRect();
+            s.side === "right" ? g.value = a.clientX - r.left : g.value = r.right - a.clientX
+        }
+          , z = a => {
+            a.preventDefault(),
+            S.value = !0,
+            f("start");
+            const n = document.createElement("div");
+            n.style.position = "fixed",
+            n.style.zIndex = "1000",
+            n.style.cursor = "col-resize",
+            n.style.top = "0",
+            n.style.left = "0",
+            n.style.width = "100%",
+            n.style.height = "100%",
+            d.value && (d.value.style.transition = "none"),
+            document.body.appendChild(n);
+            const r = () => {
+                S.value = !1,
+                document.removeEventListener("mouseup", r),
+                document.removeEventListener("mousemove", W),
+                document.body.removeChild(n),
+                d.value && d.value.style.removeProperty("transition"),
+                f("end")
+            }
+            ;
+            document.addEventListener("mousemove", W),
+            document.addEventListener("mouseup", r)
+        }
+        ;
+        return (a, n) => (v(),
+        b("div", {
+            ref_key: "rootRef",
+            ref: h,
+            class: O(["orch-width-resizer", {
+                "is-visible": S.value,
+                [k.side]: !0
+            }]),
+            style: C({
+                [k.side]: "-1px"
+            }),
+            onMousedown: z
+        }, null, 38))
+    }
+})
+  , he = Q(fe, [["__scopeId", "data-v-a840a77e"]])
+  , _e = {
+    key: "stub"
+}
+  , T = 300
+  , xe = Y({
+    __name: "index",
+    props: {
+        spaceUid: {},
+        repo: {},
+        layoutModeOverride: {}
+    },
+    setup(k) {
+        const x = k
+          , s = y(null)
+          , f = y("cover")
+          , h = y("cover")
+          , d = c( () => P().infoWidth)
+          , g = y(!1)
+          , S = y(null)
+          , W = oe(x.spaceUid)
+          , z = P()
+          , a = ne(x.spaceUid)
+          , n = ie(async () => {
+            await a.isReady,
+            a.repo(x.repo) || a.initRepo(x.repo)
+        }
+        , void 0)
+          , r = y("wide")
+          , D = () => {
+            const w = s.value?.clientWidth;
+            w && w < 300 * 2 ? r.value = "compact" : r.value = "wide"
+        }
+        ;
+        V(s.value, D),
+        V(window.document.body, D),
+        D();
+        const i = c( () => x.layoutModeOverride ?? r.value)
+          , $ = c( () => W.all)
+          , _ = c( () => pe())
+          , L = c( () => a.repo(x.repo));
+        ue(ae, L.value);
+        const m = c( () => L.value.chat())
+          , l = c( () => L.value.info())
+          , Z = c( () => [m.value, l.value])
+          , A = c( () => [m.value, L.value.chat(1)].filter(X))
+          , ee = c( () => [l.value, L.value.info(1)].filter(X))
+          , U = c( () => d.value - 20 > T);
+        function te() {
+            U.value ? E(T) : E(s.value?.clientWidth || 0)
+        }
+        function E(w) {
+            const p = T
+              , t = s.value?.clientWidth || p
+              , o = w;
+            o >= p && o <= t ? z.infoWidth = o : z.infoWidth = Math.min(t, Math.max(p, o))
+        }
+        return F( () => [i.value, L.value], () => {
+            L.value.setLayoutMode(i.value)
+        }
+        ),
+        F(Z, (w, p) => {
+            const [t,o] = w ?? []
+              , [e,u] = p ?? [];
+            t?.chat_uid === e?.chat_uid && o?.chat_uid === u?.chat_uid || (o && !u && !t && e && e.session_uid !== o.session_uid || !o && u && t && t.session_uid !== u.session_uid || o && u && (o.session_uid !== u.session_uid || o._uid === u._uid) ? h.value = "none" : u && (!o || o.index < u.index) ? h.value = "reveal" : h.value = "cover",
+            i.value === "wide" && (t && !e && !o || !t && e && !o) || t && e && (e.session_uid !== t.session_uid || e._uid === t._uid) ? f.value = "none" : e && t && t.index < e.index || !t ? f.value = "reveal" : f.value = "cover",
+            setTimeout( () => {
+                h.value = "none",
+                f.value = "none"
+            }
+            , 500))
+        }
+        , {
+            immediate: !0
+        }),
+        le( () => {
+            E(d.value)
+        }
+        ),
+        de( () => {
+            S.value?.disconnect()
+        }
+        ),
+        (w, p) => {
+            const t = G("orch-anchor")
+              , o = G("loading");
+            return B((v(),
+            b("div", {
+                ref_key: "root",
+                ref: s,
+                class: O(["layers", {
+                    "info-width-dragging": g.value,
+                    [i.value]: !0
+                }]),
+                style: C({
+                    "--info-width": d.value + "px"
+                })
+            }, [J("div", {
+                class: O(["layers-content", {
+                    "with-info": i.value === "wide" ? !!l.value : r.value === "wide" && (l.value || m.value)
+                }])
+            }, [re(w.$slots, "default", {}, void 0, !0)], 2), J("div", {
+                class: "layers-items",
+                style: C(i.value === "compact" && r.value === "wide" && {
+                    width: d.value + "px"
+                } || "")
+            }, [M(n).isLoading.value ? I("", !0) : (v(),
+            R(j, {
+                key: 0,
+                duration: f.value === "none" ? 1 : void 0,
+                name: f.value
+            }, {
+                default: q( () => [(v(!0),
+                b(H, null, K(A.value, e => B((v(),
+                b("div", {
+                    key: e._uid + "-" + e.chat.key,
+                    class: O(["chat-slider", {
+                        "in-background": i.value === "wide" && l.value && l.value.index > e.index || _.value.active && _.value.chat_uid !== e.chat_uid && _.value.mode === M(N).PANEL
+                    }]),
+                    style: C([{
+                        "z-index": (i.value === "wide" ? e.index * 2 : e.chat.index) + 2
+                    }, i.value === "wide" && l.value && l.value.index >= e.index ? {
+                        width: "calc(100% - var(--info-width))",
+                        transition: (g.value ? "none !important" : "") || ""
+                    } : ""])
+                }, [$.value[e.chat_uid] ? (v(),
+                R(ve, {
+                    key: 0,
+                    entity: $.value[e.chat_uid],
+                    layer: e,
+                    "layout-mode": i.value,
+                    "in-background": i.value === "wide" && l.value && l.value.index > e.index || _.value.active && _.value.chat_uid !== e.chat_uid && _.value.mode === M(N).PANEL,
+                    onOpenInfo: u => i.value === "compact" || !e.info.isOpen || e.info.tab !== "info" ? e.info.openTab("info") : e.info.close(),
+                    onOpenMedia: u => e.info.openTab("media"),
+                    onOpenSearch: u => e.info.openTab("search"),
+                    onOpenMembers: u => e.info.openTab("members"),
+                    onClose: u => e.chat.close()
+                }, null, 8, ["entity", "layer", "layout-mode", "in-background", "onOpenInfo", "onOpenMedia", "onOpenSearch", "onOpenMembers", "onClose"])) : I("", !0)], 6)), [[t, e.chat_uid, "chat-slider"]])), 128)), A.value.length ? I("", !0) : (v(),
+                b("div", _e))]),
+                _: 1
+            }, 8, ["duration", "name"])), M(n).isLoading.value ? I("", !0) : (v(),
+            R(j, {
+                key: 1,
+                duration: h.value === "none" ? 1 : void 0,
+                name: h.value
+            }, {
+                default: q( () => [(v(!0),
+                b(H, null, K(ee.value, e => B((v(),
+                b("div", {
+                    key: e._uid + "-" + e.info.key,
+                    class: O(["info-slider", {
+                        "in-background": _.value.active && _.value.chat_uid !== e.chat_uid && _.value.mode === M(N).PANEL,
+                        "drop-shadow": i.value !== "wide" || !m.value || m.value.index < e.index
+                    }]),
+                    style: C({
+                        "z-index": (i.value === "wide" ? e.index * 2 + 1 : e.info.index) + 2
+                    })
+                }, [ce(me, {
+                    class: "info-side-inner",
+                    layer: e,
+                    "is-expanded": U.value,
+                    "layout-mode": i.value,
+                    onExpand: te,
+                    onClose: u => e.info.close()
+                }, null, 8, ["layer", "is-expanded", "layout-mode", "onClose"])], 6)), [[t, $.value[e.chat_uid], "info-slider"]])), 128))]),
+                _: 1
+            }, 8, ["duration", "name"])), (i.value === "compact" && r.value === "wide" ? l.value || m.value : l.value && (!m.value || m.value.index <= l.value.index)) ? (v(),
+            R(he, {
+                key: 2,
+                side: "left",
+                style: C({
+                    "z-index": (l.value || m.value).index * 2 + 50,
+                    left: "unset",
+                    right: d.value - 3 + "px"
+                }),
+                width: d.value,
+                "onUpdate:width": E,
+                onStart: p[0] || (p[0] = e => g.value = !0),
+                onEnd: p[1] || (p[1] = e => g.value = !1)
+            }, null, 8, ["style", "width"])) : I("", !0)], 4)], 6)), [[o, i.value === "wide" && m.value && M(n).isLoading.value]])
+        }
+    }
+})
+  , Ke = Q(xe, [["__scopeId", "data-v-41c1d4b9"]]);
+export {Ke as default};

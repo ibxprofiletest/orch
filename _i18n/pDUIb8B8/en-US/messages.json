@@ -1,0 +1,1759 @@
+{
+    "en-US": {
+        "entities": {
+            "chat": "Chat | Chats",
+            "message": "Message | Messages",
+            "unknownChat": "Unknown chat",
+            "task": "Task | Tasks",
+            "subtask": "Subtask | Subtasks",
+            "project": "Project | Projects",
+            "subproject": "Subproject | Subprojects",
+            "noProject": "Project | project",
+            "member": "Member | Members",
+            "group": "Group | Groups",
+            "groupChat": "Group chat",
+            "team": "Team | Teams",
+            "document": "Doc | Docs",
+            "calendar": "Calendar | Calendars",
+            "teamChat": "Team chat",
+            "view": "View | Views",
+            "space": "Space | Spaces",
+            "workspace": "Workspace | Workspaces",
+            "channel": "Channel | Channels",
+            "user": "User | Users",
+            "guest": "Guest | Guests",
+            "bot": "Bot | Bots",
+            "mention": "Mention | Mentions",
+            "personal": "Personal",
+            "number": "Number | Numbers",
+            "option": "Option | Options",
+            "checklist": "Checklist | Checklists",
+            "checklistItem": "Checklist | Checklists",
+            "status": "Status | Statuses",
+            "date": "Date | Dates",
+            "text": "Text | Texts",
+            "profile": "Profile | Profiles",
+            "subscriber": "Subscriber | Subscribers",
+            "publisher": "Publisher | Publishers",
+            "deactivated": "Deactivated",
+            "archived": "Archive",
+            "addEntity": {
+                "task": "task",
+                "subtask": "subtask",
+                "project": "project",
+                "subproject": "subproject",
+                "member": "member | members",
+                "group": "group",
+                "team": "team",
+                "channel": "channel",
+                "view": "view",
+                "document": "document",
+                "space": "space",
+                "option": "option",
+                "parent": "parent",
+                "related": "related",
+                "chat": "chat"
+            }
+        },
+        "status": {
+            "created": "Created",
+            "active": "Active",
+            "deleted": "Deleted",
+            "deactivated": "Deactivated"
+        },
+        "roles": {
+            "member": "Member",
+            "guest": "Guest",
+            "owner": "Owner",
+            "crossOwner": "Cross Owner",
+            "editor": "Editor",
+            "crossEditor": "Cross Editor",
+            "projectMembers": "Project members",
+            "spaceMembers": "Space members",
+            "spaceGuests": "Space guests",
+            "workspaceOwner": "Workspace Owner",
+            "workspaceEditor": "Workspace Editor",
+            "projectOwner": "Project Owner",
+            "external": "External",
+            "bot": "Bot",
+            "unknown": "Unknown | Unknown"
+        },
+        "rolesUids": {
+            "owner": "Owner",
+            "editor": "Editor",
+            "member": "Member",
+            "space_owner": "Workspace owner",
+            "space_editor": "Workspace editor",
+            "project_owner": "Project owner",
+            "project_editor": "Project editor",
+            "parent_owner": "Parent owner",
+            "parent_editor": "Parent editor"
+        },
+        "actions": {
+            "setNo": "Set no {type}",
+            "create": "Create",
+            "continue": "Continue",
+            "back": "Back",
+            "activate": "Activate",
+            "deactivate": "Deactivate",
+            "delete": "Delete",
+            "deleteFile": "Delete file",
+            "rename": "Rename",
+            "edit": "Edit",
+            "noName": "No name",
+            "noAccess": "No access",
+            "draft": "Draft",
+            "addTask": "Add task",
+            "add": "Add",
+            "online": "Online",
+            "lastSeen": "Last seen",
+            "longTimeAgo": "long time ago",
+            "copy": "Copy",
+            "revoke": "Revoke",
+            "copyInviteLink": "Copy invite link",
+            "inviteLink": "Invite links",
+            "forwarded": "Forwarded",
+            "originalTime": "Original time:",
+            "localTime": "Your local time:",
+            "from": "from",
+            "type": "Type",
+            "you": "You",
+            "as": "as",
+            "no": "no | No",
+            "or": "or",
+            "schedule": "Schedule",
+            "deleteAttachment": {
+                "title": "Deleting attachment",
+                "description": "Are you sure you want to delete this attachment?",
+                "okText": "Delete",
+                "cancelText": "Oh no, cancel",
+                "removeAll": "Remove all",
+                "sendSeparately": "Send separately"
+            },
+            "movingTask": {
+                "title": "Moving task",
+                "description_1": "Are you sure you want to move",
+                "description_2": "into",
+                "description_3": "All its subtasks will be moved as well",
+                "okText": "Yes, move"
+            }
+        },
+        "messagePatterns": {
+            "members": {
+                "add_self": "{after_updater} joined",
+                "add": "{after_updater} added {after_members} ",
+                "add_with_invite": "{after_members} joined via invite link",
+                "delete": "{after_updater} removed {after_member}",
+                "delete_self": "{after_updater} left",
+                "make": "{after_member} is now a Member"
+            },
+            "visitor": {
+                "add_with_invite": "{after_updater} joined via invite link as a Guest",
+                "delete": "{after_updater} removed {after_visitor}"
+            },
+            "custom": {
+                "chat": {
+                    "add": "{after_updater} added {after_value} to {after_field}",
+                    "set": "{after_updater} set {after_field} to {after_value}",
+                    "delete": "{after_updater} removed {before_value} from {after_field}",
+                    "clear": "{after_updater} cleared {after_field}"
+                },
+                "status": {
+                    "move": "{after_updater} moved task to {after_value}",
+                    "return": "{after_updater} returned task to {after_value}"
+                },
+                "option": {
+                    "add": "{after_updater} added {after_value} to {after_field}",
+                    "set": "{after_updater} set {after_field} to {after_value}",
+                    "delete": "{after_updater} removed {after_value} from {after_field}",
+                    "clear": "{after_updater} cleared {after_field}"
+                },
+                "text": "{after_updater} has changed value of {after_field} to {after_value}",
+                "date": {
+                    "set": "{after_updater} set a date to {after_value} in {after_field}",
+                    "change": "{after_updater} changed a date to {after_value} in {after_field}",
+                    "delete": "{after_updater} removed a date from {after_field}",
+                    "set_timespan": "{after_updater} set a timespan to {after_value} in {after_field}"
+                },
+                "member": {
+                    "add": "{after_updater} added {after_value} to {after_field}",
+                    "set": "{after_updater} set {after_value} to {after_field}",
+                    "delete": "{after_updater} removed {before_value} from {after_field}",
+                    "clear": "{after_updater} cleared {after_field}"
+                }
+            },
+            "owner": {
+                "set": "{after_owner} is now the Owner"
+            },
+            "editor": {
+                "add": "{after_editor} is now an Editor",
+                "delete": "{before_editor} is not Editor anymore"
+            },
+            "create": "{after_name} created by {after_updater}",
+            "participants": {
+                "add": "{after_updater} added {after_members}"
+            },
+            "assignee": {
+                "set": "{after_assignee} is now Assignee",
+                "change": "{after_updater} changed Assignee to {after_assignee}",
+                "delete": "{before_assignee} is not Assignee anymore"
+            },
+            "due_date": {
+                "set_timespan": "{after_updater} set a timespan to {after_start_at} - {after_end_at}",
+                "set": "{after_updater} set a due date to {after_end_at}",
+                "change": "{after_updater} changed due date to {after_end_at}",
+                "delete": "{after_updater} removed due date"
+            },
+            "meeting": {
+                "start": "{after_updater} started the conversation",
+                "finish": "Conversation has ended"
+            }
+        },
+        "ctxMenu": {
+            "chatCtxMenu": {
+                "firstLevel": {
+                    "copyUid": "Copy _uid",
+                    "openInfo": "Open info",
+                    "openChat": "Open chat",
+                    "openSidePanel": "Open in side panel",
+                    "copyLink": "Copy link",
+                    "copyRelativeLink": "Copy relative link",
+                    "showInChats": "Show in chats",
+                    "showInTasks": "Show in tasks",
+                    "showInDocs": "Open doc",
+                    "goToEntity": "Go to {entity}",
+                    "addFavorite": "Add to favorite",
+                    "removeFavorite": "Remove from favorite",
+                    "addTask": "Add task",
+                    "addSubtask": "Add subtask",
+                    "addSubproject": "Add subproject",
+                    "addSubdoc": "Add subdocument",
+                    "duplicate": "Duplicate",
+                    "convert": "Convert into",
+                    "mention": "Mention",
+                    "starredMessages": "Starred messages",
+                    "markAsUnread": "Mark as unread",
+                    "markAsRead": "Mark {count} as read",
+                    "mute": "Mute",
+                    "unmute": "Unmute",
+                    "follow": "Follow",
+                    "unfollow": "Unfollow",
+                    "pin": "Pin",
+                    "unpin": "Unpin",
+                    "addRelated": "Add to related",
+                    "removeRelated": "Remove related",
+                    "archive": "Archive",
+                    "unarchive": "Unarchive",
+                    "leave": "Leave",
+                    "delete": "Delete",
+                    "join": "Join",
+                    "subscribe": "Subscribe",
+                    "unsubscribe": "Unsubscribe",
+                    "settings": "Settings",
+                    "resetMentions": "Reset mentions"
+                },
+                "disabledReasons": {
+                    "convert_to": {
+                        "unsupported_source_type": "Unsupported source type",
+                        "unsupported_target_type": "Unsupported target type",
+                        "has_children": "Cannot convert chat with children",
+                        "child_no_rights": "This chat has children that you don't have rights to",
+                        "no_rights": "You should be an owner or editor to convert this chat"
+                    }
+                },
+                "secondLevel": {
+                    "whoCanView": "Who can view",
+                    "whoCanViewInfo": "These people are not involved in the {entity}, but can view the process",
+                    "addMember": "Add member",
+                    "addSubscriber": "Add subscriber",
+                    "addTeam": "Add team",
+                    "duplicateSolo": "Only this {entity}",
+                    "duplicateWithChildren": "With children"
+                },
+                "warnings": {
+                    "unarchive": "To unarchive this, you need to unarchive its project or move to non-archived project."
+                }
+            },
+            "memberCtxMenu": {
+                "copyUid": "Copy _uid",
+                "memberInfo": "Member info",
+                "openChat": "Open chat",
+                "mention": "Mention",
+                "assignTask": "Assign task",
+                "makeAssignee": "Make assignee",
+                "unassign": "Unassign",
+                "makeEditor": "Make editor",
+                "removeEditor": "Remove editor",
+                "makeOwner": "Make owner",
+                "makeGuest": "Make guest",
+                "makeSubscriber": "Make subscriber",
+                "makeMember": "Make member",
+                "makePublisher": "Make publisher",
+                "addToChannel": "Add to channel",
+                "addToChat": "Add to chat",
+                "join": "Join",
+                "subscribe": "Subscribe",
+                "unsubscribe": "Unsubscribe",
+                "leaveChannel": "Leave channel",
+                "leaveError1": "You can't leave a common chat",
+                "leaveError2": "You can't unsubscribe a common chat",
+                "leave": "Leave",
+                "deactivateMember": "Deactivate member",
+                "deactivateGuest": "Deactivate guest",
+                "reactivateMember": "Reactivate member",
+                "reactivateGuest": "Reactivate guest",
+                "removeSubscriber": "Remove subscriber",
+                "removePublisher": "Remove publisher",
+                "removeError": "You can't remove user from a common chat",
+                "removeGuest": "Remove guest",
+                "removeMember": "Remove member",
+                "warnings": {
+                    "cantRemove": "You can't remove user from a common chat",
+                    "cantLeave": "You can't leave a common chat",
+                    "cantUnsubscribe": "You can't unsubscribe a common chat"
+                }
+            },
+            "messageCtxMenu": {
+                "copyUid": "Copy _uid",
+                "quote": "Quote",
+                "reply": "Reply",
+                "showChat": "Show in chat",
+                "showMessage": "Show Message",
+                "share": "Share",
+                "newChat": "New chat",
+                "forward": "Forward",
+                "quickForward": "Quick forward",
+                "move": "Move",
+                "quickMove": "Quick move",
+                "messages": "messages",
+                "markStarred": "Mark as starred",
+                "removeStarred": "Remove starred mark",
+                "edit": "Edit",
+                "sendScheduled": "Send now",
+                "reschedule": "Reschedule",
+                "source": "Go to source",
+                "moveTo": "Move to",
+                "saveAs": "Save as",
+                "download": "Download",
+                "saveMedia": "Save {file_type} to Gallery",
+                "saveManyMedia": "Save {length} items to Gallery",
+                "saveToDownloads": "Save to Downloads",
+                "copyMessages": "Copy messages",
+                "copyText": "Copy text",
+                "copySelected": "Copy selected text",
+                "copyLinkFile": "Copy link to {file_type}",
+                "copyFile": "Copy {file_type}",
+                "copyLink": "Copy link",
+                "copyEmail": "Copy email",
+                "openFile": "Open file",
+                "select": "Select",
+                "unselect": "Unselect",
+                "reacted": "{count} reacted",
+                "seenBy": "Seen by {count} member | Seen by {count} members",
+                "noOne": "No one",
+                "assignTo": "and assign to",
+                "createTask": "Create task",
+                "createSubtask": "Create subtask",
+                "addToChecklist": "Add to checklist",
+                "addToDescriptionChecklist": "Add to description checklist",
+                "addToDescription": "Add to description",
+                "newChecklist": "New checklist",
+                "newItem": "New item",
+                "delete": "Delete",
+                "deleteMessages": {
+                    "oneTitle": "Deleting message",
+                    "oneDescription": "Are you sure you want to delete this message?",
+                    "moreTitle": "Deleting messages",
+                    "moreTitle_2": "Delete {count} messages",
+                    "moreDescription": "Are you sure you want to delete {count} messages?",
+                    "okText": "Yes, Delete",
+                    "cancelText": "Cancel"
+                },
+                "notCreateTaskFromSelected": "You don't have rights to do this",
+                "cantAddToDescription": "Current description editor doesn't support this"
+            },
+            "fieldCtxMenu": {
+                "copyUid": "Copy _uid",
+                "convertToStatus": {
+                    "title": "Convert to Status",
+                    "error": "Only single selection fields can be converted to status"
+                },
+                "convertToOption": {
+                    "title": "Convert to Option",
+                    "error": "Primary status cannot be converted"
+                },
+                "merge": {
+                    "title": "Merge"
+                },
+                "remove": {
+                    "title": "Remove",
+                    "error": "Primary status cannot be removed"
+                },
+                "delete": {
+                    "title": "Delete",
+                    "error": "Primary status cannot be deleted",
+                    "warningDialog": {
+                        "title": "Deleting field",
+                        "description": "Are you sure you want to delete field {field_name}? {break} It's used in projects: {projects_list} This action {cant_be_undone}.",
+                        "cantBeUndone": "cannot be undone",
+                        "okText": "Yes",
+                        "cancelText": "Cancel"
+                    }
+                },
+                "changingMultiple": {
+                    "title": "Changing multiple selection",
+                    "description_1": "There are {count} tasks that have more than one value in this field. If you change this field to single selection",
+                    "description_2": "all values except the first one will be lost",
+                    "description_3": "Are you sure you want to continue?",
+                    "okText": "Yes",
+                    "cancelText": "Cancel"
+                },
+                "duplicate": "Duplicate",
+                "rename": "Rename",
+                "edit": "Edit"
+            }
+        },
+        "files": {
+            "all": "All",
+            "media": "Media | media",
+            "image": "Image | Images",
+            "video": "Video | Videos",
+            "photo": "Photo",
+            "document": "Document",
+            "link": {
+                "type_1": "Link",
+                "type_2": "Links",
+                "type_3": "links",
+                "type_4": "link"
+            },
+            "file": {
+                "type_1": "File",
+                "type_2": "Files",
+                "type_3": "files",
+                "type_4": "file"
+            }
+        },
+        "date": {
+            "today": "today",
+            "todayAt": "today at",
+            "at": "at",
+            "minute": "minute | minutes",
+            "agoMinutes": "just now | {count} minute ago | {count} minutes ago",
+            "inMinutes": "now | in {count} minute | in {count} minutes",
+            "now": "now",
+            "yesterday": "yesterday | Yesterday",
+            "tomorrow": "tomorrow | Tomorrow"
+        },
+        "dateGroup": {
+            "past": "Past",
+            "today": "Today",
+            "tomorrow": "Tomorrow",
+            "this_week": "This Week",
+            "next_week": "Next Week",
+            "this_month": "This Month",
+            "next_month": "Next Month",
+            "later": "Later"
+        },
+        "tags": {
+            "bug": "BUG",
+            "task": "TASK",
+            "error": "ERROR",
+            "note": "NOTE",
+            "idea": "IDEA",
+            "todo": "TODO",
+            "fixme": "FIXME"
+        },
+        "entitySelector": {
+            "noMembersAddContent": {
+                "members": {
+                    "title": "There's nobody to add",
+                    "subTitle": "Everybody's here!"
+                },
+                "teams": {
+                    "title": "No teams yet",
+                    "subTitle": "Create the first one"
+                }
+            },
+            "entities": {
+                "members": "Members",
+                "options": "Options",
+                "chat-members": "Members",
+                "context-members": "Related members",
+                "tasks": "Tasks",
+                "projects": "Projects",
+                "groups": "Groups",
+                "teams": "Teams",
+                "spaces": "Spaces",
+                "channels": "Channels",
+                "docs": "Documents",
+                "project-members": "Project members",
+                "space-members": "Space members",
+                "space-guests": "Space guests",
+                "deactivated-members": "Deactivated members",
+                "bots": "Bots",
+                "mentions": "Mentions",
+                "checklists": "Checklists"
+            },
+            "warnings": {
+                "parentNestLevelProject": "Orchestra supports only 2 levels of project nesting",
+                "parentNestLevelTask": "Orchestra supports only 4 levels of task nesting",
+                "parentArchived": "You cannot nest in an archived {type}"
+            },
+            "createEntity": {
+                "titles": {
+                    "createNewButton": "Create new {query} {entity}",
+                    "createNewInput": "Name new {query} {entity}"
+                },
+                "errors": {
+                    "emptyName": "You can't create a {entity} until you enter a name",
+                    "haveRights": "You don't have enough permissions to do this"
+                }
+            },
+            "groupWithoutProject": "No project"
+        },
+        "searchingStateList": {
+            "searching": "Searching...",
+            "notFound": "There are no chats with this name :(",
+            "notFoundOptions": "There are no options with this name :(",
+            "noOptions": "No options found"
+        },
+        "searchInInfo": {
+            "title": "Search in chat",
+            "notFound": "No search items here yet..."
+        },
+        "chatAwareness": {
+            "typing": "{members} is typing | {members} are typing"
+        },
+        "emptyStates": {
+            "chats": {
+                "chatsBody": {
+                    "title": "Create or choose a chat to start messaging",
+                    "createChatFirst": "Write a name and press",
+                    "createChatSecond_1": "to create a new",
+                    "createChatSecond_2": "to create a new",
+                    "create": "Create",
+                    "noMessages": "No messages yet"
+                },
+                "chatsList": {
+                    "all": {
+                        "title": "No chats yet",
+                        "button": "Create new chat"
+                    },
+                    "unread": {
+                        "title": "Not a single unread message",
+                        "description": "You don't seem to miss anything"
+                    },
+                    "favorite": {
+                        "title": "No favorite chats yet",
+                        "description": "Add chat here via the context menu"
+                    }
+                }
+            },
+            "projects": {
+                "emptyState": {
+                    "title": "No projects yet",
+                    "titleNo": "No projects",
+                    "description": "Create the first one",
+                    "button": "Create a project"
+                }
+            },
+            "attachmentsInfo": {
+                "general": {
+                    "title": "No media in the chat yet",
+                    "description": "Try sending a picture, file or link to the chat"
+                },
+                "withType": {
+                    "title": "No {type} in the chat yet",
+                    "description": "Try sending a {type} to the chat"
+                }
+            },
+            "teamsList": {
+                "title": "No members found",
+                "noMembers": "No members yet",
+                "addPeople": {
+                    "title_1": "Invite people to space, to create and manage",
+                    "title_2": "your teams and assign them for projects and tasks.",
+                    "title_3": "Invite members"
+                }
+            },
+            "docs": {
+                "docsPage": {
+                    "title": "Create or select a document to start working"
+                }
+            }
+        },
+        "chatBarTabs": {
+            "all": "All",
+            "unread-muted": "Unread",
+            "recent": "Recent",
+            "starred": "Starred",
+            "favorite": "Favorite",
+            "personal": "Personal",
+            "assigned-to-me": "Assigned to me",
+            "project": "Projects",
+            "task": "Tasks",
+            "team": "Teams",
+            "group": "Groups",
+            "channel": "Channels",
+            "meeting": "Meetings"
+        },
+        "chatBody": {
+            "errorLoading": {
+                "title": "Oops, we weren't able to load messages",
+                "button": "Try again"
+            },
+            "unreadMessages": "Unread messages",
+            "chooseForward": "Choose chat to forward",
+            "forwardToChats": "Forward to {count} chat | Forward to {count} chats",
+            "dateTag": {
+                "regular": "{date}",
+                "scheduled": "Scheduled for {date}"
+            },
+            "scheduledMessages": "Scheduled Messages",
+            "comments": "Add comment | {count} comment | {count} comments",
+            "messageForm": {
+                "forward": {
+                    "title": "Forwarding messages",
+                    "messages": "{count} message | {count} messages"
+                },
+                "move": {
+                    "title": "Moving messages",
+                    "messages": "{count} message | {count} messages"
+                },
+                "editMessage": "Editing message"
+            }
+        },
+        "unreadGroups": {
+            "mentioned": "Mentioned",
+            "tasks": "Tasks",
+            "other": "Other",
+            "updates": "Updates"
+        },
+        "inputPlaceholders": {
+            "search": "Search",
+            "searching": "Searching...",
+            "searchTasks": "Search for tasks",
+            "searchTeammates": "Search for teammates",
+            "searchByName": "Search by name or username",
+            "new": "New",
+            "new_1": "New",
+            "sendMessage": "Send a message",
+            "scheduleMessage": "Schedule a message",
+            "description_chat": "What is this {entity} about",
+            "description_member": "Tell us about yourself",
+            "noDescription": "No description",
+            "access": "Access by link",
+            "loading": "Loading",
+            "copied": "Copied",
+            "revoking": "Revoking...",
+            "creating": "Creating..."
+        },
+        "dragAndDrop": {
+            "browse": "Browse files or Drop it here",
+            "dropToChat": "Drop files here to add them",
+            "fileSize": "file size less then {limit} MB",
+            "alert": {
+                "title": "The file is too big",
+                "description": "The file size should be less than {limit} MB"
+            }
+        },
+        "info": {
+            "tabs": {
+                "info": "Info",
+                "attachments": "Attachments"
+            },
+            "info": {
+                "description": "Description",
+                "files": "Files",
+                "related": "Related tasks",
+                "subtasks": "Subtasks",
+                "subprojects": "Subprojects",
+                "leaveProject": "Leave project"
+            },
+            "profile": {
+                "title": "My profile | Profile"
+            },
+            "invite": {
+                "type": {
+                    "member": {
+                        "description": "Can join this chat, it's project and workspace, and also can create new chats"
+                    },
+                    "guest": {
+                        "description": "Only can join chats, they've been invited in directly by link"
+                    }
+                }
+            },
+            "checklist": {
+                "errors": {
+                    "emptyItemName": "Item name cannot be empty",
+                    "emptyChecklistName": "Checklist name cannot be empty"
+                }
+            },
+            "saveEntity": "Save this task before adding subtasks and files",
+            "containMore": "This task cannot contain subtasks",
+            "showArchived": "Show archived",
+            "showCurrent": "Show current tasks"
+        },
+        "memberInfo": {
+            "assignedTasks": "Assigned tasks",
+            "ownedTasks": "Owned tasks",
+            "commonChats": "Common chats",
+            "commonWorkspaces": "Common workspaces",
+            "ownedProjects": "Owned projects"
+        },
+        "tasksPage": {
+            "tasksBar": {
+                "views": {
+                    "title": "Views",
+                    "folders": {
+                        "all": "All",
+                        "assigned_to_me": "Assigned to me",
+                        "checklists": "Checklists",
+                        "today": "Today",
+                        "recently_completed": "Recently completed",
+                        "expired": "Expired",
+                        "archived": "Archived"
+                    },
+                    "fromPreset": "From preset",
+                    "add": "Create new view"
+                },
+                "projects": {
+                    "searchPlaceholder": "Search...",
+                    "notFound": {
+                        "title": "No projects found",
+                        "description": "Try to change search query"
+                    }
+                }
+            },
+            "tasksBody": {
+                "tabs": {
+                    "list": "List",
+                    "kanban": "Kanban",
+                    "action": "Set as default"
+                },
+                "showMyTasksOnly": {
+                    "dropdown": {
+                        "overview": {
+                            "title": "Overview",
+                            "description": "See all tasks available to you"
+                        },
+                        "myTasks": {
+                            "title": "My tasks",
+                            "description": "See only tasks where you are an Owner or Assignee"
+                        }
+                    },
+                    "hiddenInfo": {
+                        "description": "No hidden tasks | {count} task is hidden | {count} tasks are hidden",
+                        "switchBtn": "Switch to Overview"
+                    }
+                },
+                "filters": {
+                    "addAnother": "Add another field",
+                    "filters": {
+                        "title": "Filters",
+                        "bodyTitle": "Filter by",
+                        "button": "Reset",
+                        "mode": {
+                            "title": "Filter mode",
+                            "include": "Include",
+                            "exclude": "Exclude"
+                        }
+                    },
+                    "sort": {
+                        "title": "Sort | sort",
+                        "bodyTitle": "Sort by",
+                        "button": "Reset"
+                    },
+                    "group": {
+                        "title": "Group | group",
+                        "bodyTitle": "Group by",
+                        "button": "Reset",
+                        "tooltip": "Grouping can only be two-level"
+                    },
+                    "display": {
+                        "title": "Display",
+                        "bodyTitleFields": "Fields",
+                        "bodyTitleOptions": {
+                            "title": "{layout} options",
+                            "emptyGroups": "Show empty groups",
+                            "archivedTasks": "Show archived tasks",
+                            "defaultGrouping": "Kanban default grouping"
+                        },
+                        "button": "Reset default",
+                        "tooltip": "Already set by default"
+                    }
+                }
+            },
+            "collapse": {
+                "expand": "Expand All",
+                "collapse": "Collapse All",
+                "showArchived": "Show archived",
+                "hideArchived": "Hide archived"
+            },
+            "sort": {
+                "asc": "Sort ascending",
+                "desc": "Sort descending",
+                "clear": "Clear sort"
+            },
+            "views": {
+                "actions": {
+                    "save": "Save",
+                    "reset": "Reset",
+                    "create": "Create new view",
+                    "cancel": "Cancel"
+                }
+            }
+        },
+        "kanbanPage": {
+            "disabledReasonsToAddTask": {
+                "permission": "You do not have permission to add tasks",
+                "archived": "You cannot add tasks in an archived project",
+                "lastColumn": "You cannot add tasks to the last status column",
+                "predefined": "You can't add tasks into predefined views",
+                "sorting": "You cannot add tasks while sorting is active",
+                "multiGrouped": "Kanban is grouped by multi field"
+            },
+            "noDropCard": {
+                "cantDrop": "You can't drop here because",
+                "unavailable": "Drag&Drop in Kanban is currently unavailable for Owner field",
+                "multiGrouped": "kanban is grouped by multi field",
+                "rights": "of insufficient rights"
+            },
+            "dropCard": {
+                "dropCard": "Drop card here to move it.\nKanban is sorted by",
+                "createNew": "Drop card here to create new column"
+            },
+            "dropColumn": "Drop column here to reorder. Changes will be applied globally"
+        },
+        "teamsPage": {
+            "seatsLeftAlert": {
+                "seatsLeft": "You have reached members limit ({totalSeats}). Inviting new members will increase subscription cost | You are using {count}/{totalSeats} seats in workspace | You are using {count}/{totalSeats} seats in workspace"
+            },
+            "teamsBar": {
+                "teams": {
+                    "title": "Teams"
+                },
+                "views": {
+                    "title": "Views",
+                    "folders": {
+                        "all": "All",
+                        "members": "Members",
+                        "bots": "Bots",
+                        "guests": "Guests",
+                        "deactivated": "Deactivated",
+                        "deleted": "Deleted"
+                    }
+                }
+            }
+        },
+        "docsPage": {
+            "docsBar": {
+                "docs": {
+                    "title": "Documents"
+                },
+                "actions": {
+                    "add": "Create new document",
+                    "import": "Import from Notion"
+                }
+            }
+        },
+        "datePicker": {
+            "range": "Set date range",
+            "cancel": "Cancel",
+            "set": "Set",
+            "setForDays": "Set for {count} day | Set for {count} days",
+            "daysSelected": "{count} day selected | {count} days selected",
+            "clear": "Clear"
+        },
+        "mentionSelector": {
+            "everyoneChat": "Everyone in chat",
+            "everyone": "Everyone",
+            "inviteMention": "Invite & mention",
+            "mention": "Mention"
+        },
+        "missingMember": {
+            "notMember": "is not a member",
+            "notMembers": "are not members",
+            "add": "Add to chat"
+        },
+        "defaultStatuses": {
+            "backlog": "Backlog",
+            "todo": "To do",
+            "doing": "Doing",
+            "review": "Review",
+            "done": "Done"
+        },
+        "defaultPriority": {
+            "low": "Low",
+            "medium": "Medium",
+            "high": "High"
+        },
+        "channelType": {
+            "regular": {
+                "title": "Regular",
+                "description": "Visible to members and cross-members"
+            },
+            "private": {
+                "title": "Private",
+                "description": "Visible only to members"
+            },
+            "public": {
+                "title": "Public",
+                "description": "Visible to everyone in workspace"
+            },
+            "common": {
+                "title": "Common",
+                "description": "Visible to everyone in workspace, new members are automatically added"
+            }
+        },
+        "fields": {
+            "addField": {
+                "title_existing": "Add existing field",
+                "title": "Add field"
+            },
+            "types": {
+                "text": "Text",
+                "number": "Number",
+                "date": "Date",
+                "status": "Status",
+                "option": "Option",
+                "member": "Member",
+                "chat": "Chat",
+                "checklist": "Checklist"
+            },
+            "number": {
+                "taskNeedsSummarization": "This field should be summarized",
+                "tasksNeedSummarization": "There are tasks with not summarized values.",
+                "summarize": "Summarize"
+            },
+            "titles": {
+                "fields": {
+                    "member": "Member fields",
+                    "task": "Task fields"
+                },
+                "options": "Values",
+                "multipleSelection": "Multiple selection",
+                "defaultValue": "Default value",
+                "archive": "Automatically archive tasks",
+                "archiveAfter": "Archive tasks after",
+                "preferences": "Preferences",
+                "adjustments": "Adjustments",
+                "primaryStatus": "Primary status field",
+                "kanbanGrouping": "Kanban default grouping",
+                "automaticallyArchiveTasks": "Automatically archive tasks",
+                "privacyType": "Privacy",
+                "days": "days",
+                "follow": "Automatically follow chats",
+                "showSubprojects": "Show subprojects tasks",
+                "rename": "Rename",
+                "delete": "Delete",
+                "none": "None",
+                "childrenSum": "Sum children when no value is set",
+                "numberFormat": "Number format",
+                "precision": "Precision"
+            },
+            "defaultFields": {
+                "name": "Name",
+                "item": "Item",
+                "project_uid": "Project",
+                "parent_uid": "Parent",
+                "checklist_uid": "Checklist",
+                "task_uid": "Task",
+                "owner_uuid": "Owner",
+                "assignee_uuid": "Assignee",
+                "due_date": "Due date",
+                "created_at": "Created at",
+                "completed_at": "Completed at",
+                "priority": "Priority",
+                "tags": "Tags",
+                "nickname": "Username",
+                "email": "Email",
+                "last_seen_at": "Last seen",
+                "role": "Role"
+            },
+            "errors": {
+                "fieldNameEmpty": "Field name can't be empty",
+                "fieldNameExists": "Duplicate field name",
+                "optionNameEmpty": "Option name can't be empty",
+                "optionNameExists": "Duplicate option",
+                "multipleSelectionUnavailable": "Multiple selection isn't available for this type of field",
+                "defaultFieldEdit": "Default fields can't be edited, duplicate it to make changes",
+                "systemFieldEdit": "System fields can't be edited",
+                "changeFieldInSpace": "This is global field and should be edited from Workspace settings. Duplicate it to create local copy",
+                "noConfig": "This field doesn't have config",
+                "multiDate": "MultiDate is not supported",
+                "summarizedFieldCannotBeEdited": "Summarized field can't be edited"
+            },
+            "placeholders": {
+                "fieldName": "Field name",
+                "optionName": "Option name"
+            },
+            "buttons": {
+                "addOption": "Add option",
+                "addItem": "Add item",
+                "done": "Apply",
+                "cancel": "Cancel",
+                "okText": "Yes"
+            },
+            "warnings": {
+                "changingMultiple": {
+                    "title": "Changing multiple selection",
+                    "description_1": "There are {loserTasks} tasks that have more than one value in this field. If you change this field to single selection, ",
+                    "description_2": "all values except the first one will be lost.",
+                    "description_3": "Are you sure you want to continue?"
+                },
+                "deleteField": {
+                    "title": "Deleting field",
+                    "description_1": "Are you sure you want to delete {field_name} field? This action cannot be undone."
+                }
+            }
+        },
+        "warningPopups": {
+            "this": "This",
+            "deleteEntity": {
+                "description_1": "Are you sure you want to delete {entity}",
+                "description_2": "All of its tasks and subprojects will be deleted also.",
+                "description_3": "All of subtasks tree will be deleted also.",
+                "description_4": "cannot be undone.",
+                "deleting": "Deleting",
+                "okText": "Yes, Delete",
+                "cancelText": "Cancel"
+            },
+            "leaveMember": {
+                "description_1": "Are you sure you want to leave",
+                "description_2": "cannot be undone."
+            },
+            "leaving": {
+                "title": "Leaving",
+                "okText": "Continue",
+                "description_1": "Before leaving workspace you need to leave all its projects and tasks. Continue leaving?"
+            },
+            "removing": {
+                "title": "Removing",
+                "okText": "Continue",
+                "description_1": "Before removing member from workspace you need to remove him from its projects and tasks. Continue removing?"
+            },
+            "ownership": {
+                "title": "Changing owner of",
+                "description_1": "Are you sure you want pass ownership to",
+                "description_2": "You will lose full access to it and it's children",
+                "okText": "Yes",
+                "cancelText": "Cancel"
+            },
+            "removeMember": {
+                "description_1": "Are you sure you want to remove",
+                "description_2": "from",
+                "description_3": "cannot be undone.",
+                "cant": {
+                    "cantLeave": "You can't leave",
+                    "cantLeaveThis": "You can't leave this",
+                    "becauseYou": "Because you're:",
+                    "becauseYouThe": "because you're the",
+                    "cantRemove": "You can't remove",
+                    "because": "Because",
+                    "is": "is:",
+                    "isAn": "is an",
+                    "an": "An",
+                    "of": "of",
+                    "and": "and",
+                    "ofThis": "of this",
+                    "itsTasks": "its tasks",
+                    "itsTeams": "its teams",
+                    "owner": "owner",
+                    "assignee": "assignee",
+                    "okTextLeave": "Assign and leave",
+                    "okTextRemove": "Assign and remove",
+                    "passRoleLeaving": "Pass roles to other users before leaving!",
+                    "passRoleRemoving": "Pass roles to other users before removing!"
+                }
+            },
+            "deactivating": {
+                "title": "Deactivating",
+                "description": "The user will lose access to your workspace until reactivated",
+                "okText": "Deactivate",
+                "cancelText": "Cancel"
+            },
+            "project": {
+                "title": "Missing project members",
+                "description_1": "Do you want to add?"
+            },
+            "archiveProject": {
+                "title": {
+                    "projectsAndTasks": "Archive {project} and {task}?",
+                    "projectsOnly": "Archive {project}?",
+                    "project": "project | {count} subproject | {count} subproject | {count} subproject",
+                    "task": "task | {count} task | {count} tasks | {count} tasks"
+                },
+                "description": "All subprojects ({subprojects_count}) and tasks ({tasks_count}) will be archived too",
+                "okText": "Archive project",
+                "cancelText": "Cancel"
+            },
+            "unarchiveProject": {
+                "title": "Unarchive {project}?",
+                "description": "All subprojects ({subprojects_count}) and non-auto-archiving tasks ({tasks_count}) will be unarchived too",
+                "okText": "Unarchive project",
+                "cancelText": "Cancel"
+            },
+            "unarchiveAutoTask": {
+                "title": "Unarchive {task}?",
+                "description": "Please change the task's status to unarchive it.",
+                "okText": "Unarchive task",
+                "cancelText": "Cancel"
+            },
+            "taskNotSaved": {
+                "title": "Task not saved",
+                "description": "You will lose your changes. Continue?",
+                "okText": "Yes",
+                "cancelText": "Cancel"
+            },
+            "dialogConfirm": {
+                "project_join": {
+                    "title": "Joining project",
+                    "description": "You are not a member of project {project} and will join it, proceed?",
+                    "okText": "Yes",
+                    "cancelText": "Cancel"
+                },
+                "convert_to": {
+                    "title": "Convert to {type}",
+                    "description": "You are about to convert {chat} to {type}, proceed?",
+                    "okText": "Yes",
+                    "cancelText": "Cancel"
+                },
+                "unknown_action": {
+                    "title": "Unknown action",
+                    "description": "Please contact support",
+                    "okText": "Close"
+                }
+            },
+            "leave": "Leave",
+            "remove": "Remove",
+            "cancel": "Cancel",
+            "newAssignee": "New Assignee:",
+            "newOwner": "New Owner:",
+            "newStatus": "New Status:",
+            "ofProject": "of project",
+            "added": "and will be added to it if continue"
+        },
+        "versionAlert": {
+            "title": "The new version is here",
+            "btnTextRestart": "Restart to Update",
+            "btnTextUpdate": "Update",
+            "great": "Great"
+        },
+        "versionIsland": {
+            "prompt": {
+                "title": "New version available 🎉",
+                "description": "Click \"Update\" to refresh the page",
+                "descriptionElectron": "It will be installed on next launch",
+                "btnText": "Update",
+                "btnTextElectron": "Restart now"
+            },
+            "afterUpdate": {
+                "title": "Orchestra was updated",
+                "description": "Thank you for working with us ❤️",
+                "btnGreat": "Great",
+                "btnWhatsNew": "What's new",
+                "btnGetApp": "Get app"
+            }
+        },
+        "subscriptionAlert": {
+            "titleTrial": "Your free trial ends on {date}. Need more time? {demo_call} with us!",
+            "titleBetalist": "🔥 BetaList Exclusive: Get 50% off your workspace for a year {activate_now}",
+            "bookDemo": "Schedule a demo call",
+            "activateNow": "Activate now",
+            "updateCredentials": "update payment credentials",
+            "titlePrivileged": "Unable to charge your card for subscription. Please, {update_credentials} for {customer_email}",
+            "titleMember": "Subscription update payment failed. Please, ask admins to update payment credentials for {customer_email}.",
+            "titleBlocked": "This workspace will be blocked soon, please contact {support} if you want to keep it"
+        },
+        "pwaAlert": {
+            "title": "Try Orchestra installed as an app",
+            "btnTextInstall": "Install",
+            "btnTextDismiss": "Dismiss"
+        },
+        "workspaceSelector": {
+            "createNewSpace": "Add Workspace",
+            "workspaceSettings": "Settings",
+            "leave": "Leave Workspace",
+            "logout": "Log Out"
+        },
+        "selectWorkspacePage": {
+            "title": "Get started with your workspace",
+            "description": "Select the workspace you want to join or create a new one",
+            "create": {
+                "title": "Create new Workspace",
+                "description": "Start fresh and build a workspace for your team"
+            },
+            "join": {
+                "title": "Join existing Workspace",
+                "description": "Use an invite link to connect with your team"
+            }
+        },
+        "joinWorkspacePage": {
+            "title": "Join team's Workspace",
+            "description": "Ask workspace owner to send you an invite link",
+            "inputLabel": "Invite link",
+            "inputPlaceholder": "Paste invite link here"
+        },
+        "subscriptionBanners": {
+            "trialExpired": {
+                "title": "Your 7-days free trial is over",
+                "prompt": "Please add payment details to continue using Orchestra",
+                "button": "Subscribe",
+                "buttonSwitch": "Switch to another workspace",
+                "buttonCreate": "Create or join another workspace"
+            },
+            "missing": {
+                "title": "Please create a subscription",
+                "prompt": "We currently offer a single paid plan, but you can start with a 7-days free trial",
+                "button": "Start my free trial",
+                "buttonSwitch": "Switch to another workspace"
+            },
+            "demo": {
+                "title": "All done!",
+                "prompt": "You can start collaborating with your team.\n\nTo ensure a smooth start and give you a firsthand Orchestra experience, we'd love to invite you to a one-time 30-min demo call with our team.",
+                "button": "Pick a date",
+                "buttonSwitch": "Skip for now"
+            }
+        },
+        "createWorkspacePage": {
+            "title": "Create workspace",
+            "nameTitle": "Workspace name",
+            "nameInput": "e.g. Unicorn",
+            "peopleCountTitle": "How many people in your company",
+            "choose": "Choose one or more",
+            "workingOn": {
+                "title": "What are you working on",
+                "options": {
+                    "marketing": "Marketing",
+                    "design": "Design",
+                    "development": "Development",
+                    "productManagement": "Product Management",
+                    "humanResources": "Human Resources",
+                    "support": "Support",
+                    "other": "Other"
+                }
+            }
+        },
+        "invitePages": {
+            "inviteJoin": {
+                "welcome": "Welcome to",
+                "joinAs": "Join as {member}",
+                "orCancel": "or {cancel}",
+                "cancel": "Cancel"
+            },
+            "inviteLoading": {
+                "title": "Invite invalid",
+                "message": "This invite may be expired, or you might not have permission to join.",
+                "btnText": "Continue to Orchestra"
+            },
+            "inviteInvalid": {
+                "title": "We're experiencing some issues",
+                "unknown": "Please try again later or contact support",
+                "notExist": "The invite doesn't exist. It has been revoked or deleted",
+                "expired": "The invite has expired",
+                "notActive": "The invite can't be used right now",
+                "maxUsesReached": "The invite has reached the maximum number of uses",
+                "operatorNotAllowed": "Most likely you've already used this invite",
+                "login": "Login to Orchestra",
+                "btnText": "Continue to Orchestra"
+            },
+            "inviteLaunched": {
+                "join_title": "Successfully joined the",
+                "join_1": "We've beamed the info to your Orchestra app.",
+                "join_2": "You can close this browser tab or continue with the web version.",
+                "fail_title": "Something has happened",
+                "fail_1": "The invite cannot be accepted.",
+                "fail_2": "Please try again or contact the space owner.",
+                "btnText": "Continue to Orchestra",
+                "btnTextGo": "Go to joined Chat",
+                "btnTextBack": "Back to the app"
+            }
+        },
+        "errorPage": {
+            "doesntExist": "You just hit a route that doesn't exist...",
+            "redirected": "You will be redirected in {seconds} second | You will be redirected in {seconds} seconds",
+            "error": "An error occurred",
+            "redirectNow": "Redirect now"
+        },
+        "meetings": {
+            "tabs": {
+                "meeting": "Meeting",
+                "transcription": "Transcription"
+            },
+            "controls": {
+                "returntocall": "Return to call",
+                "startCall": "Start Call",
+                "joinCall": "Join Call",
+                "expand": "Expand",
+                "minimize": "Minimize",
+                "startVideo": "Start Video",
+                "stopVideo": "Stop Video",
+                "selectBackground": "Select Background",
+                "stopSharing": "Stop Sharing",
+                "shareScreen": "Share Screen",
+                "stopRecording": "Stop Recording",
+                "record": "Record",
+                "recorded": "Meeting is being recorded",
+                "cannotRecord": "You cannot record this meeting",
+                "disableTileView": "Disable Tile View",
+                "enableTileView": "Enable Tile View",
+                "shrink": "Shrink",
+                "fullScreen": "Full Screen",
+                "menu": "Menu",
+                "island": "Island",
+                "rightPanel": "Right panel",
+                "join": "Join",
+                "joinNewWindow": "Join in New Window",
+                "joinInApp": "Join with Native UI",
+                "copyMeetingLink": "Copy Meeting Link",
+                "endCallForAll": "End call for all",
+                "hangUp": "Hang Up",
+                "default": "Default",
+                "toggleJitsiUI": "Toggle Jitsi UI",
+                "camera": "Camera",
+                "microphone": "Microphone",
+                "audioOutput": "Audio output",
+                "dynamicQuality": "Dynamic quality",
+                "view": "View",
+                "mute": "Mute",
+                "unmute": "Unmute",
+                "noiseSuppression": "Noise suppression",
+                "raiseHand": "Raise hand",
+                "lowerHand": "Lower hand"
+            },
+            "texts": {
+                "participants": "No members | {count} member | {count} members",
+                "external": "No external | {count} ext. | {count} ext.",
+                "onlyYou": "Only you"
+            }
+        },
+        "navTabs": {
+            "downloadApps": "Download apps",
+            "toggleTheme": "Toggle theme",
+            "errors": {
+                "shouldBeMember": "You should be a workspace member to use this"
+            }
+        },
+        "spaceSettings": {
+            "modifyMessageTimeout": {
+                "title": "Modify message timeout",
+                "description": "Set the maximum time to edit or delete messages in this space",
+                "buttons": {
+                    "30Minutes": "30 min.",
+                    "1Hour": "1 hr.",
+                    "12Hours": "12 hrs.",
+                    "1Day": "1 day",
+                    "NoLimit": "No limit"
+                }
+            }
+        },
+        "userSettings": {
+            "title": "Settings",
+            "accountSettings": "Account settings",
+            "profile": "Profile",
+            "info": {
+                "appVersion": "App Version"
+            },
+            "pages": {
+                "subscription": {
+                    "title": "Subscription",
+                    "plan": "Plan",
+                    "status": "Status",
+                    "trialEnds": "Trial ends",
+                    "nextPayment": "Next payment",
+                    "statuses": {
+                        "active": "Active",
+                        "trialing": "Trial",
+                        "past_due": "Past due",
+                        "canceled": "Canceled",
+                        "blocked": "Blocked"
+                    },
+                    "basis": {
+                        "monthly": "monthly",
+                        "annual": "annual"
+                    },
+                    "manage": {
+                        "title": "More details and managing",
+                        "action": "Manage subscription"
+                    }
+                },
+                "account": {
+                    "title": "My account",
+                    "actions": {
+                        "edit": "Edit",
+                        "save": "Save",
+                        "saved": "Saved",
+                        "next": "Next",
+                        "verification": "Enter verification code",
+                        "emailChanged": "Email changed",
+                        "passwordChanged": "Password changed",
+                        "changeAvatar": {
+                            "actionName": "Edit user avatar",
+                            "titleProfile": "Profile photo",
+                            "titleSpace": "Space photo",
+                            "change": "Change photo",
+                            "changeColor": "Change color",
+                            "remove": "Remove photo",
+                            "takePhoto": "Take a {entity} photo",
+                            "upload": "Upload",
+                            "browse": "Browse",
+                            "dragDrop": "or drag & drop to upload",
+                            "cancel": "Cancel",
+                            "confirm": "Confirm",
+                            "revert": "Revert",
+                            "errorMessage": "No access to camera",
+                            "errorDescription": "Enable access in the website settings in your browser or upload photo"
+                        },
+                        "signOut": "Sign out",
+                        "removeAccount": "Remove account"
+                    },
+                    "forms": {
+                        "changeName": {
+                            "title": "Edit your name"
+                        },
+                        "changeUsername": {
+                            "title": "Edit your username"
+                        },
+                        "changeEmail": {
+                            "title": "Edit your email"
+                        },
+                        "changePassword": {
+                            "title": "Change password",
+                            "shouldContain": "Should contain:"
+                        }
+                    }
+                },
+                "space": {
+                    "title": "Space settings",
+                    "autoFollowing": "Auto-Following settings",
+                    "description": "Enabling this will show all chats of workspace/project in chatlist",
+                    "warningSpace": "You must be a privileged member of this workspace to change this setting",
+                    "warningProject": "You must be a privileged member of this project to change this setting",
+                    "customFields": "Custom Fields",
+                    "manageFields": "Manage all custom fields for this space",
+                    "delete": {
+                        "title": "Delete this space",
+                        "description_1": "This action will completely and permanently delete the",
+                        "description_2": "space. It will be impossible to restore the data!",
+                        "description_3": "Are you sure you want this?",
+                        "description_4": "Deleting a space will completely delete data, projects, tasks, chats and messages!",
+                        "description_5": "Also, absolutely all participants in the space will no longer have the opportunity to work with it.",
+                        "description_6": "To confirm, enter the name of the space to be deleted: {name}",
+                        "buttons": {
+                            "delete": "Delete space",
+                            "cancel": "Cancel",
+                            "confirm": "Yes, delete space"
+                        }
+                    }
+                },
+                "notifications": {
+                    "title": "Notifications",
+                    "statusTitle": "Notification status",
+                    "systemTitle": "Your operating system (OS)",
+                    "systemWarning": "Your IOS version is less than 16.4, please update to get notifications",
+                    "soundTitle": "In-app notifications with sound",
+                    "soundDescription": "Get sound notifications within Orchestra",
+                    "mentionCounter": "Show counter only for mentions (across all workspaces)",
+                    "mentionCounterDescription_1": "Otherwise counter will show count for unread (except muted) chats in currently open workspace",
+                    "mentionCounterDescription_2": "+ mentions in other workspaces",
+                    "settingsTitle": "Notifications settings",
+                    "settingsDescription": "Control notifications in the app settings",
+                    "settingsAction": "Open settings"
+                },
+                "preferences": {
+                    "title": "Preferences",
+                    "messages": {
+                        "mentions_auto_add": "Automatically add members when mentioning them",
+                        "reaction_on_starred": "Use reactions when starring messages"
+                    },
+                    "experimental": {
+                        "ai_suggested_chat_title": "AI-Suggested chat titles and emoji when creating from messages"
+                    }
+                },
+                "config": {
+                    "title": "App config",
+                    "theme": {
+                        "title": "Theme",
+                        "light": "Light",
+                        "dark": "Dark",
+                        "system": "System"
+                    },
+                    "kanbanFullName": "Show full task name in Kanban",
+                    "mentions": "Colored user mentions",
+                    "chatsUnreadExpander": "Show expander on unread chats section",
+                    "time": {
+                        "title": "Display auto-detected time",
+                        "firstOption": "Original",
+                        "secondOption": "Local"
+                    },
+                    "locale": "Language",
+                    "languages": {
+                        "en-US": "English",
+                        "ru-RU": "Russian"
+                    },
+                    "description": "Enable Read-Only description",
+                    "aiTasks": "Enable AI-Suggested task titles",
+                    "transparency": "Enable transparency in App",
+                    "fontsize": "Fontsize of chat messages",
+                    "dualSymbols": "Dual symbols",
+                    "newFilters": "New tasks filters UI",
+                    "chatItem": {
+                        "title": "Customize chat item",
+                        "dropdownTitle": "Try other entity types",
+                        "typesTitle": {
+                            "type_1": "Default",
+                            "type_2": "Full height avatar",
+                            "type_3": "Project on top"
+                        },
+                        "typesDescription": {
+                            "time": "Time",
+                            "top": "top",
+                            "bottom": "bottom",
+                            "together": "Time and mentions together"
+                        }
+                    }
+                }
+            }
+        },
+        "loginPages": {
+            "buttons": {
+                "back": "Back",
+                "demo": "Book a demo",
+                "continue": "Continue",
+                "saveAndContinue": "Save and continue",
+                "try": "Try again",
+                "signIn": "Sign in"
+            },
+            "errors": {
+                "blocked": "Your account is blocked, contact support",
+                "notActivated": "Your account has not been fully activated. To continue activation, you must enter the code that was sent to your email at the next stage by clicking on the next",
+                "needLevelUp": "Your account has not been fully activated. Fill in the remaining fields",
+                "confirmCode": "We've just sent you a registration verification code. Please check your inbox and go to the next step",
+                "accountNotFound": "Account not found",
+                "confirmPassword": "Please confirm password",
+                "passwordsMatch": "Passwords don't match",
+                "shortCode": "Short code not found",
+                "somethingWrongAcc": "There is something wrong with your account. Contact technical support",
+                "wrong": "Something went wrong",
+                "unexpected": "Unexpected error occurred",
+                "errorMessage": "{message}"
+            },
+            "checkEmail": {
+                "title": "Welcome to Orchestra!",
+                "description": "Make collaboration with your team easier",
+                "collabWith": "Continue with",
+                "collabWithJoin": "Join with",
+                "dividerText": "or enter your email",
+                "dividerTextJoin": "or join with email",
+                "dividerTextOther": "or sign in via email",
+                "privacy": {
+                    "text": "By continuing, you agree to our {linkTerms} & {linkPrivacy}",
+                    "linkTerms": "Terms",
+                    "linkPrivacy": "Privacy Policy"
+                },
+                "account": {
+                    "title": "Already have an account?",
+                    "link": "Sign in"
+                }
+            },
+            "signIn": {
+                "title": "Welcome back!",
+                "description": "Enter your email and password to sign in",
+                "collabWith": "Continue with",
+                "dividerText": "or sign in via email",
+                "account": {
+                    "title": "Don't have an account yet?",
+                    "link": "Register"
+                },
+                "forgotLink": "I forgot my password"
+            },
+            "signUp": {
+                "title": "Login to your account",
+                "description": "We have sent you a confirmation number. Please verify your inbox sms by link or by code"
+            },
+            "confirmCode": {
+                "title": "Verify your email",
+                "description": "We've sent the code to {email}",
+                "formCode": "Code",
+                "resend": {
+                    "title": "Haven't got it?",
+                    "link": "Resend code",
+                    "linkDone": "Resended code",
+                    "linkInProcess": "in {expiration} s"
+                }
+            },
+            "levelUp": {
+                "title": "Introduce yourself",
+                "description": "And start collaborating with your team",
+                "buttonText": "Continue",
+                "buttonTextChecking": "Checking your nickname...",
+                "news": "Subscribe to updates newsletter",
+                "form": {
+                    "firstInput": "George",
+                    "secondInput": "Lucas"
+                }
+            },
+            "recovery": {
+                "title": "Change password",
+                "description": "Well send the code to your email"
+            },
+            "password": {
+                "title": "Set a password",
+                "titleNew": "Set a new password"
+            },
+            "authWait": {
+                "title": "Signing you in with"
+            },
+            "brokenAuth": {
+                "title": "Ooops! There was some kind of technical problem",
+                "description": "Please try again. Thank you!"
+            },
+            "expirationAuth": {
+                "title": "Ooops! It looks like youve been away for a bit too long",
+                "description": "For security reasons, please refresh the page and try registering again. Thank you!"
+            }
+        },
+        "forms": {
+            "titles": {
+                "name": "Name",
+                "firstName": "First name",
+                "lastName": "Last name",
+                "password": "Password",
+                "repeatPassword": "Repeat password",
+                "username": "Username",
+                "newEmail": "New email",
+                "email": "Email",
+                "phone": "Phone",
+                "role": "Role",
+                "currentPassword": "Current password",
+                "newPassword": "New password",
+                "confirmNewPassword": "Confirm new password"
+            },
+            "inputs": {
+                "firstName": "Enter your first name",
+                "lastName": "Enter your last name",
+                "username": "Enter your username",
+                "email": "Enter your new email",
+                "currentPassword": "Enter your current password",
+                "newtPassword": "Enter your new password",
+                "columnName": "Enter column name",
+                "confirmNewPassword": "Confirm your new password",
+                "entityName": "Enter {entity} name"
+            },
+            "errors": {
+                "required": "This field can't be empty",
+                "firstName": {
+                    "contain": "First name can contain only letters, spaces, apostrophe and hyphen",
+                    "length": "First name must be from 1 to 25 characters"
+                },
+                "lastName": {
+                    "contain": "Last name can contain only letters, spaces, apostrophe and hyphen",
+                    "length": "Last name must be from 1 to 25 characters"
+                },
+                "workspace": {
+                    "length": "Workspace name must be from 2 to 25 characters"
+                },
+                "nickname": {
+                    "contain": "Nickname should contain only latin characters, underscores and dot",
+                    "start": "Nickname can't start with a dot",
+                    "end": "Nickname can't end with a dot",
+                    "dots": "Nickname can't have more than one dot in a row",
+                    "length": "Nickname must be from 6 to 20 characters",
+                    "containResult": "Nickname can contain only A - Z, 0 - 9, underscores and dots"
+                },
+                "email": {
+                    "contain": "Email should contain only latin characters",
+                    "length": "Email must be from 7 to 50 characters",
+                    "invalid": "This email is invalid"
+                },
+                "password": {
+                    "length": "8-50 letters",
+                    "latin": "Latin only",
+                    "whitespaces": "No spaces",
+                    "digit": "Digit",
+                    "lowercase": "Lowercase letter",
+                    "uppercase": "Uppercase letter"
+                }
+            }
+        },
+        "dates": {
+            "months": {
+                "jan": "Jan",
+                "feb": "Feb",
+                "mar": "Mar",
+                "apr": "Apr",
+                "may": "May",
+                "jun": "Jun",
+                "jul": "Jul",
+                "aug": "Aug",
+                "sep": "Sep",
+                "oct": "Oct",
+                "nov": "Nov",
+                "dec": "Dec"
+            },
+            "fullMonths": {
+                "jan": "January",
+                "feb": "February",
+                "mar": "March",
+                "apr": "April",
+                "may": "May",
+                "jun": "June",
+                "jul": "July",
+                "aug": "August",
+                "sep": "September",
+                "oct": "October",
+                "nov": "November",
+                "dec": "December"
+            }
+        },
+        "emojiPicker": {
+            "ai_suggested": "🔮 AI Suggested",
+            "smileys_people": "Smiles & People",
+            "animals_nature": "Animals & Nature",
+            "food_drink": "Food & Drink",
+            "activities": "Activities",
+            "travel_places": "Travel places",
+            "objects": "Objects",
+            "symbols": "Symbols",
+            "flags": "Flags",
+            "recent": "Recently used",
+            "searchPlaceholder": "Search emoji",
+            "skinTone": "Skin tone"
+        },
+        "bugReporter": {
+            "title": "Report a bug",
+            "description": "Please describe the issue you've encountered below",
+            "placeholder": "Describe the issue",
+            "consent": "I understand that this report will record my screen and will be sent to the Orchestra team",
+            "recordAgain": "Record again",
+            "startRecording": "Start recording",
+            "stopRecording": "Stop recording",
+            "sendReport": "Send report",
+            "cancel": "Cancel",
+            "recording": "Recording"
+        },
+        "linking": {
+            "greeting": "Hello {user}!",
+            "selectChat": "Select a chat to continue",
+            "orCancel": "or {cancel}",
+            "cancel": "Cancel",
+            "prompt": "You are about to link {source_type} chat {source_name} with a chat in Orchestra",
+            "promptPersonal": "You are about to link your {source_type} account ({source_name}) with your Orchestra account",
+            "confirm": "Confirm linking",
+            "linkWith": "Link with {target_chat}",
+            "yay": "YAY!",
+            "linked": "You have successfully linked {what}",
+            "yourAccount": "your account",
+            "yourChat": "{chat} with {source_type} chat {source_name}",
+            "invalid": "Oops, seems like the link is invalid.",
+            "return": "Return to work"
+        },
+        "share": {
+            "selectChat": "Select a chat to share",
+            "orCancel": "or {cancel}",
+            "cancel": "Cancel",
+            "send": "Share"
+        }
+    }
+}
