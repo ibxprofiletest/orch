@@ -42,44 +42,37 @@
         <script>
             // Force full page navigation for pricing and download links
             (function() {
-                function interceptLinks() {
-                    const links = document.querySelectorAll('a[href="/pricing"], a[href="/download"], a[href*="pricing"], a[href*="download"], a[href="index.htm"]');
-                    links.forEach(function(link) {
-                        const href = link.getAttribute('href');
-                        if (href && (href.includes('/pricing') || href.includes('/download') || href.includes('index.htm'))) {
-                            // Remove existing listeners by cloning
-                            const newLink = link.cloneNode(true);
-                            link.parentNode.replaceChild(newLink, link);
-                            
-                            // Add click handler that forces full page navigation
-                            newLink.addEventListener('click', function(e) {
-                                e.preventDefault();
-                                e.stopPropagation();
-                                e.stopImmediatePropagation();
-                                const targetHref = this.getAttribute('href');
-                                if (targetHref === '/pricing' || targetHref.includes('pricing')) {
-                                    window.location.href = '/pricing.html';
-                                } else if (targetHref === '/download' || targetHref.includes('download')) {
-                                    window.location.href = '/download.html';
-                                } else if (targetHref === 'index.htm' || targetHref.includes('index')) {
-                                    window.location.href = '/index.htm';
-                                }
-                                return false;
-                            }, true); // Use capture phase to intercept before router
+                // Use event delegation on document body to catch all clicks
+                document.addEventListener('click', function(e) {
+                    const link = e.target.closest('a');
+                    if (!link) return;
+                    
+                    const href = link.getAttribute('href');
+                    if (!href) return;
+                    
+                    // Skip external links, anchor links, and app links
+                    if (href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('#') || href.startsWith('https://app.')) return;
+                    
+                    // Check if this is a navigation link we need to intercept
+                    const isPricing = href.includes('pricing');
+                    const isDownload = href.includes('download');
+                    const isIndex = href.includes('index.htm') || href === 'index.htm';
+                    
+                    if (isPricing || isDownload || isIndex) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        e.stopImmediatePropagation();
+                        
+                        if (isPricing) {
+                            window.location.href = '/pricing.html';
+                        } else if (isDownload) {
+                            window.location.href = '/download.html';
+                        } else if (isIndex) {
+                            window.location.href = '/index.htm';
                         }
-                    });
-                }
-                
-                // Run immediately and after DOM is ready
-                if (document.readyState === 'loading') {
-                    document.addEventListener('DOMContentLoaded', interceptLinks);
-                } else {
-                    interceptLinks();
-                }
-                
-                // Also run after a delay to catch dynamically rendered links
-                setTimeout(interceptLinks, 500);
-                setTimeout(interceptLinks, 1500);
+                        return false;
+                    }
+                }, true); // Use capture phase to intercept before router
             })();
         </script></head><body><!--teleport start anchor--><!----><!--teleport anchor--><div id="__nuxt"><div class="min-h-dvh flex flex-col bg-background text-foreground"><span></span><header class="md:h-[64px] sm:h-[64px] max-sm:h-[48px] flex border-b-[1px] border-[var(--main-10)] overflow-hidden sticky top-0 z-[2000] backdrop-blur-lg"><div class="max-lg:px-[20px] w-full lg:max-w-[1200px] lg:min-w-[1200px] lg:mx-auto flex items-center justify-between"><div class="w-full lg:pl-[120px] lg:pr-[70px] flex items-center justify-between"><a href="index.htm" class="max-lg:hidden flex items-center gap-2"><svg width="24" height="24" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 7.06391C0 3.16262 3.16262 0 7.06391 0H21.9766C25.8779 0 
 29.0405 3.16262 29.0405 7.06391V21.9766C29.0405 25.8779 25.8779 29.0405 
