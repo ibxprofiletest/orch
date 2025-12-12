@@ -701,6 +701,47 @@
         <meta name="twitter:site" content="@orchso">
         <meta name="twitter:card" content="summary_large_image">
         <script type="module" src="/_nuxt/MxmY6CdA.js" crossorigin></script>
+        <script>
+            // Force full page navigation for pricing and download links
+            (function() {
+                function interceptLinks() {
+                    const links = document.querySelectorAll('a[href="/pricing"], a[href="/download"], a[href*="pricing"], a[href*="download"]');
+                    links.forEach(function(link) {
+                        const href = link.getAttribute('href');
+                        if (href && (href.includes('/pricing') || href.includes('/download'))) {
+                            // Remove existing listeners by cloning
+                            const newLink = link.cloneNode(true);
+                            link.parentNode.replaceChild(newLink, link);
+                            
+                            // Add click handler that forces full page navigation
+                            newLink.addEventListener('click', function(e) {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                e.stopImmediatePropagation();
+                                const targetHref = this.getAttribute('href');
+                                if (targetHref === '/pricing' || targetHref.includes('pricing')) {
+                                    window.location.href = '/pricing.html';
+                                } else if (targetHref === '/download' || targetHref.includes('download')) {
+                                    window.location.href = '/download.html';
+                                }
+                                return false;
+                            }, true); // Use capture phase to intercept before router
+                        }
+                    });
+                }
+                
+                // Run immediately and after DOM is ready
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', interceptLinks);
+                } else {
+                    interceptLinks();
+                }
+                
+                // Also run after a delay to catch dynamically rendered links
+                setTimeout(interceptLinks, 500);
+                setTimeout(interceptLinks, 1500);
+            })();
+        </script>
     </head>
     <body>
         <!--teleport start anchor-->
@@ -817,14 +858,14 @@
                     "target": 14
                 },
                 "Pricing",
-                "/pricing",
+                "/pricing.html",
                 {
                     "text": 31,
                     "url": 32,
                     "target": 14
                 },
                 "Download",
-                "/download",
+                "/download.html",
                 {
                     "title": 34,
                     "links": 35
