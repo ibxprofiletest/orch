@@ -3,6 +3,14 @@
     {
       "source": "/nuxt/:path*",
       "destination": "/_nuxt/:path*"
+    },
+    {
+      "source": "/pricing",
+      "destination": "/pricing.html"
+    },
+    {
+      "source": "/download",
+      "destination": "/download.html"
     }
   ],
   "headers": [
@@ -18,17 +26,6 @@
           "value": "*"
         }
       ]
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/pricing",
-      "destination": "/pricing.html",
-      "permanent": true
-    }, {
-      "source": "/download",
-      "destination": "/download.html",
-      "permanent": true
     }
   ]
 }
