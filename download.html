@@ -74,6 +74,77 @@
                     }
                 }, true); // Use capture phase to intercept before router
             })();
+            
+            // Add "CA: Coming Soon" button next to Download button
+            (function() {
+                function addCAButton() {
+                    // Find the Download link in the header navigation
+                    const downloadLinks = document.querySelectorAll('a[href*="download"], a[href="/download"], nav a');
+                    let downloadLink = null;
+                    
+                    for (let link of downloadLinks) {
+                        const text = link.textContent.trim();
+                        if (text === 'Download' || link.getAttribute('href')?.includes('download')) {
+                            // Check if it's in the header navigation (not footer)
+                            const header = link.closest('header');
+                            if (header) {
+                                downloadLink = link;
+                                break;
+                            }
+                        }
+                    }
+                    
+                    if (downloadLink && !document.querySelector('.ca-coming-soon-btn')) {
+                        // Create the CA button
+                        const caButton = document.createElement('a');
+                        caButton.className = 'ca-coming-soon-btn inline-flex items-center rounded-md px-5 py-3 font-medium transition-colors duration-200 !p-0 text-[var(--main-100)] hover:text-[var(--main-60)] active:text-[var(--purple-85)] !font-[400]';
+                        caButton.textContent = 'CA: Coming Soon';
+                        caButton.href = '#';
+                        caButton.style.cursor = 'pointer';
+                        
+                        // Add click handler to copy text and show feedback
+                        caButton.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            const originalText = this.textContent;
+                            
+                            // Copy text to clipboard
+                            navigator.clipboard.writeText(originalText).then(function() {
+                                // Change button text to "Copied!"
+                                caButton.textContent = 'Copied!';
+                                
+                                // Revert back to original text after 2 seconds
+                                setTimeout(function() {
+                                    caButton.textContent = originalText;
+                                }, 2000);
+                            }).catch(function(err) {
+                                // Fallback if clipboard API fails
+                                console.error('Failed to copy text: ', err);
+                                const originalText = caButton.textContent;
+                                caButton.textContent = 'Copied!';
+                                setTimeout(function() {
+                                    caButton.textContent = originalText;
+                                }, 2000);
+                            });
+                        });
+                        
+                        // Insert after the Download button
+                        if (downloadLink.parentNode) {
+                            downloadLink.parentNode.insertBefore(caButton, downloadLink.nextSibling);
+                        }
+                    }
+                }
+                
+                // Run after DOM is ready and after delays to catch dynamically rendered content
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', addCAButton);
+                } else {
+                    addCAButton();
+                }
+                
+                setTimeout(addCAButton, 500);
+                setTimeout(addCAButton, 1000);
+                setTimeout(addCAButton, 2000);
+            })();
         </script></head><body><!--teleport start anchor--><!----><!--teleport anchor--><!--teleport start anchor--><!----><!--teleport anchor--><div id="__nuxt"><div class="min-h-dvh flex flex-col bg-background text-foreground"><span></span><header class="md:h-[64px] sm:h-[64px] max-sm:h-[48px] flex border-b-[1px] border-[var(--main-10)] overflow-hidden sticky top-0 z-[2000] backdrop-blur-lg"><div class="max-lg:px-[20px] w-full lg:max-w-[1200px] lg:min-w-[1200px] lg:mx-auto flex items-center justify-between"><div class="w-full lg:pl-[120px] lg:pr-[70px] flex items-center justify-between"><a href="index.htm" class="max-lg:hidden flex items-center gap-2"><svg width="24" height="24" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 7.06391C0 3.16262 3.16262 0 7.06391 0H21.9766C25.8779 0 
 29.0405 3.16262 29.0405 7.06391V21.9766C29.0405 25.8779 25.8779 29.0405 
 21.9766 29.0405H7.06391C3.16262 29.0405 0 25.8779 0 21.9766V7.06391Z" fill="var(--color-logo, #1F2022)"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M14.385 24.9049C12.4707 

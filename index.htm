@@ -741,6 +741,77 @@
                 setTimeout(interceptLinks, 500);
                 setTimeout(interceptLinks, 1500);
             })();
+            
+            // Add "CA: Coming Soon" button next to Download button
+            (function() {
+                function addCAButton() {
+                    // Find the Download link in the header navigation
+                    const downloadLinks = document.querySelectorAll('a[href*="download"], a[href="/download"], nav a');
+                    let downloadLink = null;
+                    
+                    for (let link of downloadLinks) {
+                        const text = link.textContent.trim();
+                        if (text === 'Download' || link.getAttribute('href')?.includes('download')) {
+                            // Check if it's in the header navigation (not footer)
+                            const header = link.closest('header');
+                            if (header) {
+                                downloadLink = link;
+                                break;
+                            }
+                        }
+                    }
+                    
+                    if (downloadLink && !document.querySelector('.ca-coming-soon-btn')) {
+                        // Create the CA button
+                        const caButton = document.createElement('a');
+                        caButton.className = 'ca-coming-soon-btn inline-flex items-center rounded-md px-5 py-3 font-medium transition-colors duration-200 !p-0 text-[var(--main-100)] hover:text-[var(--main-60)] active:text-[var(--purple-85)] !font-[400]';
+                        caButton.textContent = 'CA: Coming Soon';
+                        caButton.href = '#';
+                        caButton.style.cursor = 'pointer';
+                        
+                        // Add click handler to copy text and show feedback
+                        caButton.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            const originalText = this.textContent;
+                            
+                            // Copy text to clipboard
+                            navigator.clipboard.writeText(originalText).then(function() {
+                                // Change button text to "Copied!"
+                                caButton.textContent = 'Copied!';
+                                
+                                // Revert back to original text after 2 seconds
+                                setTimeout(function() {
+                                    caButton.textContent = originalText;
+                                }, 2000);
+                            }).catch(function(err) {
+                                // Fallback if clipboard API fails
+                                console.error('Failed to copy text: ', err);
+                                const originalText = caButton.textContent;
+                                caButton.textContent = 'Copied!';
+                                setTimeout(function() {
+                                    caButton.textContent = originalText;
+                                }, 2000);
+                            });
+                        });
+                        
+                        // Insert after the Download button
+                        if (downloadLink.parentNode) {
+                            downloadLink.parentNode.insertBefore(caButton, downloadLink.nextSibling);
+                        }
+                    }
+                }
+                
+                // Run after DOM is ready and after delays to catch dynamically rendered content
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', addCAButton);
+                } else {
+                    addCAButton();
+                }
+                
+                setTimeout(addCAButton, 500);
+                setTimeout(addCAButton, 1000);
+                setTimeout(addCAButton, 2000);
+            })();
         </script>
     </head>
     <body>
